@@ -15,6 +15,8 @@
 
 import signal
 
+import subprocess
+
 import sensors
 
 from robot import (
@@ -80,64 +82,92 @@ signal.signal(signal.SIGINT, handle_interrupt)
 
 
 # =========================
+# APAGADO SEGURO RASPBERRY PI
+# =========================
+def poweroff_system():
+    """Apaga Raspberry Pi mediante systemd."""
+
+    print("🔌 Apagando Raspberry Pi...")
+
+    try:
+        subprocess.run(
+            ["sudo", "-n", "/usr/bin/systemctl", "poweroff"],
+            check=True,
+        )
+
+    except (subprocess.CalledProcessError, FileNotFoundError) as error:
+        print(f"⚠️ No se pudo apagar Raspberry Pi: {error}")
+        raise SystemExit(1)
+
+    raise SystemExit(0)
+
+
+# =========================
 # START
 # =========================
 
-
 print("🤖 ONYX-Pro READY")
 
-do_homing()
 
-"""
-Para desarrollo activar este bloque y desactivar el siguiente
-# strip() es un método de un objeto str elimina espacios en blanco al inicio y al final de la cadena de texto.
-mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
-human_turn = (mode == "1")
-# Así, mirror_coordinates será True cuando empiece el humano y False cuando empiece el robot
-mirror_coordinates = (mode == "1")
-"""
+try:
 
-"""Para comienzo automatico activar este bloque y desactivar el anterior"""
-mode = sensors.select_start_mode()
-human_turn = (mode == "1")
-mirror_coordinates = (mode == "1")
+    do_homing()
 
-# =========================
-# SENSORES Y BOTÓN
-# =========================
+    """Para desarrollo activar este bloque y desactivar el siguiente"""
+    # strip() es un método de un objeto str elimina espacios en blanco al inicio y al final de la cadena de texto.
+    mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
+    human_turn = (mode == "1")
+    # Así, mirror_coordinates será True cuando empiece el humano y False cuando empiece el robot
+    mirror_coordinates = (mode == "1")
 
-expected_state = sensor_occupancy_from_board(
-    board,
-    mirror_coordinates,
-)
+    """Para comienzo automatico activar este bloque y desactivar el anterior"""
+    # mode = sensors.select_start_mode()
+    # human_turn = (mode == "1")
+    # mirror_coordinates = (mode == "1")
 
-confirmed_state = sensors.initialize_and_validate_sensors(
-    expected_state,
-)
+    # =========================
+    # SENSORES Y BOTÓN
+    # =========================
 
-change_history = []
+    expected_state = sensor_occupancy_from_board(
+        board,
+        mirror_coordinates,
+    )
 
-print("\n♟️ Iniciando partida...\n")
+    confirmed_state = sensors.initialize_and_validate_sensors(
+        expected_state,
+    )
+
+    change_history = []
+
+    print("\n♟️ Iniciando partida...\n")
+
+    # =========================
+    # LOOP PRINCIPAL
+    # =========================
+
+    run_game_loop(
+        board,
+        human_turn,
+        mirror_coordinates,
+        confirmed_state,
+        change_history,
+    )
+
+    # =========================
+    # FIN PARTIDA
+    # =========================
+
+    if is_game_over(board):
+        print("\n🏁 Fin de partida")
+        print(get_result(board))
+
+        shutdown()
 
 
-# =========================
-# LOOP PRINCIPAL
-# =========================
+except sensors.ShutdownRequested:
 
-run_game_loop(
-    board,
-    human_turn,
-    mirror_coordinates,
-    confirmed_state,
-    change_history,
-)
-
-# =========================
-# FIN PARTIDA
-# =========================
-
-if is_game_over(board):
-    print("\n🏁 Fin de partida")
-    print(get_result(board))
+    print("\n🛑 Apagado solicitado mediante el botón GPIO18.")
 
     shutdown()
+    poweroff_system()

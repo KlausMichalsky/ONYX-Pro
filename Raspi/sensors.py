@@ -53,11 +53,18 @@ GPIOB = 0x13
 # ============================================================
 
 BUTTON_PIN = 18
+ROBOT_HOLD_SECONDS = 1.0
+SHUTDOWN_HOLD_SECONDS = 5.0
 
+
+class ShutdownRequested(Exception):
+    """Solicitud de apagado seguro mediante el botón físico."""
+    pass
 
 # ============================================================
 # MAPEO FÍSICO DEL TABLERO
 # ============================================================
+
 
 BOARD_SQUARES = [
 
@@ -393,8 +400,9 @@ def button_pressed():
 # ============================================================
 
 def select_start_mode():
-    """Corto = humano. Largo (1 segundo o más) = robot.
-    Esta funcion es provisoria y se puede cambiar por un menú en pantalla o un archivo de configuración."""
+    """Corto = humano.
+    Largo (1 segundo o más) = ONYX.
+    Más de 5 segundos = apagado seguro."""
 
     if button is None:
         raise RuntimeError("El botón no está inicializado.")
@@ -402,23 +410,21 @@ def select_start_mode():
     print("\n🎮 Selección de inicio:")
     print("   Pulsación corta: Humano")
     print("   Pulsación larga: ONYX")
+    print("   Mantener más de 5 segundos: Apagar")
     print("Esperando selección...")
 
     while not button.is_pressed:
         time.sleep(0.01)
 
-    start_time = time.monotonic()
+    duration = wait_button_release()
 
-    wait_button_release()
-
-    duration = time.monotonic() - start_time
-
-    if duration >= 1.0:
+    if duration >= ROBOT_HOLD_SECONDS:
         print("🤖 Empieza ONYX")
         return "2"
 
     print("♟️ Empieza el humano")
     return "1"
+
 
 # ============================================================
 # ESPERAR LIBERACIÓN DEL BOTÓN
@@ -429,11 +435,24 @@ def select_start_mode():
 
 
 def wait_button_release():
+    """Espera la liberación del botón o detecta una solicitud de apagado."""
+
     if button is None:
-        return
+        return 0.0
+
+    start_time = time.monotonic()
 
     while button.is_pressed:
+
+        duration = time.monotonic() - start_time
+
+        if duration >= SHUTDOWN_HOLD_SECONDS:
+            print("\n🛑 Apagado seguro solicitado.")
+            raise ShutdownRequested
+
         time.sleep(0.01)
+
+    return time.monotonic() - start_time
 
 
 # ============================================================
