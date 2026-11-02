@@ -114,16 +114,16 @@ try:
     do_homing()
 
     """Para desarrollo activar este bloque y desactivar el siguiente"""
-    # strip() es un método de un objeto str elimina espacios en blanco al inicio y al final de la cadena de texto.
-    mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
-    human_turn = (mode == "1")
-    # Así, mirror_coordinates será True cuando empiece el humano y False cuando empiece el robot
-    mirror_coordinates = (mode == "1")
+    """strip() es un método de un objeto str elimina espacios en blanco al inicio y al final de la cadena de texto."""
+    # mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
+    # human_turn = (mode == "1")
+    # # Así, mirror_coordinates será True cuando empiece el humano y False cuando empiece el robot
+    # mirror_coordinates = (mode == "1")
 
     """Para comienzo automatico activar este bloque y desactivar el anterior"""
-    # mode = sensors.select_start_mode()
-    # human_turn = (mode == "1")
-    # mirror_coordinates = (mode == "1")
+    mode = sensors.select_start_mode()
+    human_turn = (mode == "1")
+    mirror_coordinates = (mode == "1")
 
     # =========================
     # SENSORES Y BOTÓN
