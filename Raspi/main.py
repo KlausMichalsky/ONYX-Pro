@@ -116,7 +116,6 @@ try:
     # ---------------------------------------------------------
     # SELECCIÓN DEL MODO DE JUEGO
     # ---------------------------------------------------------
-
     # Para seleccionar modo Humano/Robot mediante teclado,
     # activar este bloque y desactivar el siguiente:
     # mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
