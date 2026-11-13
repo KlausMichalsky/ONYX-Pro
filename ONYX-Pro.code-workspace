@@ -1,9 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "Zero",
 			"path": "Zero"
 		},
 		{
+			"name": "Raspi",
 			"path": "Raspi"
 		}
 	],
