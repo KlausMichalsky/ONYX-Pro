@@ -28,6 +28,13 @@ SERIAL_PORT = None
 ser = None
 
 
+def check_shutdown_request():
+    """Comprueba si se solicitó apagar la Raspberry Pi."""
+
+    import sensors
+    sensors.check_shutdown_request()
+
+
 def initialize_serial():
     """Detecta el puerto USB e inicia la conexión serie con el RP2040."""
 
@@ -124,7 +131,11 @@ def read_robot_line():
 # =========================
 
 def wait_done():
+
     while True:
+
+        check_shutdown_request()
+
         line = read_robot_line()
 
         if line and "DONE" in line:
@@ -136,10 +147,14 @@ def wait_done():
 # =========================
 
 def do_homing():
+
     print("🤖 Enviando HOMING...")
     ser.write(b"HOMING\n")
 
     while True:
+
+        check_shutdown_request()
+
         line = read_robot_line()
 
         if line and "DONE" in line:
@@ -152,7 +167,11 @@ def do_homing():
 # =========================
 
 def wait_any(*expected):
+
     while True:
+
+        check_shutdown_request()
+
         line = read_robot_line()
 
         if line and any(e in line for e in expected):
