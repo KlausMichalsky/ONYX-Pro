@@ -52,7 +52,7 @@ GPIOB = 0x13
 # BOTÓN DE CONFIRMACIÓN
 # ============================================================
 
-BUTTON_PIN = 18
+BUTTON_PIN = 26
 ROBOT_HOLD_SECONDS = 1.0
 SHUTDOWN_HOLD_SECONDS = 5.0
 
