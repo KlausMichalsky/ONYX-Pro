@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\config.h"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\config.h"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================
@@ -260,12 +260,12 @@ inline const MotorConfig motor1Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = -1, // ‼️ -1 porque el motor/sensor esta fisicamente montado al revez
     .slowSpeed = 2000.0,
-    .fastSpeed = 25000.0, // max. 50000
+    .fastSpeed = 45000.0, // min.25000 max.50000
     .steps90Deg = MOTOR1_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor1
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 6000.0, // max. 8000
+    .acceleration = 8000.0, // min.6000 max.8000
     .enablePin = MOTOR1_ENABLE};
 
 inline const MotorConfig motor2Config = {
@@ -274,12 +274,12 @@ inline const MotorConfig motor2Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = 1,
     .slowSpeed = 1000.0,
-    .fastSpeed = 20000.0, // max. 40000
+    .fastSpeed = 35000.0, // min.20000 max.40000
     .steps90Deg = MOTOR2_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor2
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 6000.0, // max. 7000
+    .acceleration = 7000.0, // min.6000 max.7000
     .enablePin = MOTOR2_ENABLE};
 
 inline const MotorConfig motor3Config = {
@@ -288,10 +288,10 @@ inline const MotorConfig motor3Config = {
     .stepsPerRevolution = 200,
     .motorDirection = 1,
     .slowSpeed = 1000.0,
-    .fastSpeed = 6000.0,
+    .fastSpeed = 7000.0, // min.6000 max.?
     .steps90Deg = 0,     // no existe para motor3
     .stepsLimit = -9000, // pasos máximos si arranca fuera del imán (solo motor3)
     .timeout = 12000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 2000.0,
+    .acceleration = 3000.0, // min.2000 max.?
     .enablePin = MOTOR3_ENABLE};

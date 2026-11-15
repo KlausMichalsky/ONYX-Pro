@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\communication.h"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\communication.h"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

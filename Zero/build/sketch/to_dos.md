@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\to_dos.md"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\to_dos.md"
 # ✅ ToDos — Proyecto: **ChessBot---Zero**
 
 

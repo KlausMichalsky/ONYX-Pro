@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ONYX-Pro Release Manager",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/release_changelog.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

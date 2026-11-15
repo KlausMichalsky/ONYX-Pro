@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\xy_plane.h"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\xy_plane.h"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

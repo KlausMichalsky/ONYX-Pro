@@ -1,4 +1,4 @@
-C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\core\sdkoverride\msc_device.c.o: \
+C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\core\sdkoverride\msc_device.c.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\sdkoverride\msc_device.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/lib/tinyusb/src/tusb.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/lib/tinyusb/src/common/tusb_common.h \

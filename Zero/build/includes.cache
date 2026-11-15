@@ -7,14 +7,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -64,12 +64,12 @@
         "-DWIFICC=CYW43_COUNTRY_WORLDWIDE",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\cores\\rp2040",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
       ]
     }
   },
@@ -81,14 +81,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -139,12 +139,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\cores\\rp2040",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
       ]
     }
   },
@@ -156,14 +156,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -215,12 +215,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Zero.ino.cpp.merged.libsdetect.d"
       ]
     }
   },
@@ -229,14 +229,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\command.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\command.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Z_Axis.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Z_Axis.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -288,12 +288,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\command.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Z_Axis.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\command.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\Z_Axis.cpp.libsdetect.d"
       ]
     }
   },
@@ -302,14 +302,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\communication.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\communication.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\command.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\command.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -361,12 +361,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\communication.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\command.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\communication.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\command.cpp.libsdetect.d"
       ]
     }
   },
@@ -375,14 +375,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\core.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\core.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\communication.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\communication.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -434,12 +434,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\core.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\communication.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\core.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\communication.cpp.libsdetect.d"
       ]
     }
   },
@@ -448,14 +448,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\homing.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\homing.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\core.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\core.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -507,12 +507,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\homing.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\core.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\homing.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\core.cpp.libsdetect.d"
       ]
     }
   },
@@ -521,14 +521,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\motors.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\motors.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\homing.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\homing.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -580,12 +580,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\motors.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\homing.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\motors.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\homing.cpp.libsdetect.d"
       ]
     }
   },
@@ -594,14 +594,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\sensors.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\sensors.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\motors.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\motors.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -653,12 +653,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\sensors.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\motors.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\sensors.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\motors.cpp.libsdetect.d"
       ]
     }
   },
@@ -667,14 +667,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\utils.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\utils.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\sensors.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\sensors.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -726,12 +726,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\utils.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\sensors.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\utils.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\sensors.cpp.libsdetect.d"
       ]
     }
   },
@@ -740,14 +740,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\xy_plane.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\xy_plane.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\utils.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\utils.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -799,12 +799,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\xy_plane.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\utils.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\xy_plane.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\utils.cpp.libsdetect.d"
       ]
     }
   },
@@ -813,14 +813,14 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\z_Axis.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\z_Axis.cpp.libsdetect.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\xy_plane.cpp",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\xy_plane.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -872,12 +872,12 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\z_Axis.cpp",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\xy_plane.cpp",
         "-o",
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\sketch\\z_Axis.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\sketch\\xy_plane.cpp.libsdetect.d"
       ]
     }
   },
@@ -887,13 +887,13 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src\\Wire.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\Wire\\Wire.cpp.libsdetect.d"
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\Wire\\Wire.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -950,7 +950,7 @@
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\Wire\\Wire.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\Wire\\Wire.cpp.libsdetect.d"
       ]
     }
   },
@@ -960,13 +960,13 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src\\AccelStepper.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.libsdetect.d"
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -1023,7 +1023,7 @@
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.libsdetect.d"
       ]
     }
   },
@@ -1033,13 +1033,13 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src\\MultiStepper.cpp",
-      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.libsdetect.d"
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.libsdetect.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -1096,7 +1096,7 @@
         "nul",
         "-MMD",
         "-MF",
-        "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.libsdetect.d"
+        "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.libsdetect.d"
       ]
     }
   },

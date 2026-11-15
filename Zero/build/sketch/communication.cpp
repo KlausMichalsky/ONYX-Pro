@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\communication.cpp"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\communication.cpp"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

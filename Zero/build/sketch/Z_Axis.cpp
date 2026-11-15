@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\z_Axis.cpp"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\z_Axis.cpp"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

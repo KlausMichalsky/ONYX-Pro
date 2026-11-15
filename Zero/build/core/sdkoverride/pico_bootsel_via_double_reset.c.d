@@ -1,4 +1,4 @@
-C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\core\sdkoverride\pico_bootsel_via_double_reset.c.o: \
+C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\core\sdkoverride\pico_bootsel_via_double_reset.c.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\sdkoverride\pico_bootsel_via_double_reset.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/common/pico_time/include/pico/time.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/common/pico_base_headers/include/pico.h \

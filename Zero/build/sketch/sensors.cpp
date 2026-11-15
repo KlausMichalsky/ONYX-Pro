@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro_Stockfish\\Zero\\sensors.cpp"
+#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\sensors.cpp"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

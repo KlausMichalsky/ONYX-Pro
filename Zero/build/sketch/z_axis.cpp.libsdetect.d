@@ -1,5 +1,4 @@
-z_Axis.o: \
- C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\sketch\z_Axis.cpp \
+Z_Axis.o: C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Z_Axis.cpp \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/stdlib_noniso.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/RP2040Version.h \
@@ -134,8 +133,8 @@ z_Axis.o: \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Bootsel.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
- C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\sketch\config.h \
- C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\sketch\homing.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\config.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.h \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src/AccelStepper.h \
- C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\sketch\motors.h \
- C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\sketch\z_axis.h
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.h

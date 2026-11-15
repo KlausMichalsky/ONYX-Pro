@@ -1,4 +1,4 @@
-C:\Users\Klaus\Documents\ONYX-Pro_Stockfish\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o: \
+C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o: \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src\AccelStepper.cpp \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src\AccelStepper.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
