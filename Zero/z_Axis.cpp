@@ -25,21 +25,21 @@ MovingStateZ movingStateZ = MovingStateZ::IDLE;
 // MOVIMIENTOS BASE (NO BLOQUEANTES)
 // -----------------------------------------------------------------------
 void zMoveHome() {
-    motor3.setMaxSpeed(6000);
-    motor3.setAcceleration(15000);
+    motor3.setMaxSpeed(Z_GAME_SPEED);
+    motor3.setAcceleration(Z_GAME_ACCELERATION);
     motor3.moveTo(0);
 }
 
 void zMoveDown() {
-    motor3.setMaxSpeed(6000);
-    motor3.setAcceleration(15000);
+    motor3.setMaxSpeed(Z_GAME_SPEED);
+    motor3.setAcceleration(Z_GAME_ACCELERATION);
     motor3.moveTo(Z_STEPS_DOWN);
     // motor3.moveTo(Z_STEPS_DOWN - Z_HOME_OFFSET); // mover hacia abajo hasta la posición de agarre
 }
 
 void zMoveTravel() { // Subir a altura segura para mover alzar la pieza (Z arriba)
-    motor3.setMaxSpeed(6000);
-    motor3.setAcceleration(15000);
+    motor3.setMaxSpeed(Z_GAME_SPEED);
+    motor3.setAcceleration(Z_GAME_ACCELERATION);
     motor3.moveTo(0);
     // motor3.moveTo(Z_TRAVEL_POS);
 }

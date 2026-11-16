@@ -60,8 +60,10 @@
 
 // PARAMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
-#define Z_STEPS_DOWN 3300 // cantidad de pasos desde el Sensor
-//                                       // hasta el punto mas bajo -> posicion de agarre
+constexpr float Z_GAME_SPEED = 40000.0f;        // velocidad durante el juego min.6000 max.55000
+constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000
+#define Z_STEPS_DOWN 3300                       // cantidad de pasos desde el Sensor
+                                                // hasta el punto mas bajo -> posicion de agarre
 // #define Z_HOME_OFFSET 8000 / 4        // cantidad de pasos desde Sensor hast HOME -> posicion de referencia
 // #define Z_TRAVEL_POS (-Z_HOME_OFFSET) // cantidad de pasos desde HOME hasta la posición de viaje
 // para levantar la pieza (Z arriba)
@@ -283,14 +285,14 @@ inline const MotorConfig motor2Config = {
 
 inline const MotorConfig motor3Config = {
     .microstepping = MOTOR3_MICROSTEPPING,
-    .reduction = 1,
+    .reduction = 2, // Reducción mecánica 2:1. Referencial: no aplicada al cálculo de pasos del eje Z.
     .stepsPerRevolution = 200,
     .motorDirection = 1,
     .slowSpeed = 1000.0,
-    .fastSpeed = 55000.0, // min.6000 max.55000
-    .steps90Deg = 0,      // no existe para motor3
-    .stepsLimit = -9000,  // pasos máximos si arranca fuera del imán (solo motor3)
+    .fastSpeed = Z_GAME_SPEED,
+    .steps90Deg = 0,     // no existe para motor3
+    .stepsLimit = -9000, // pasos máximos si arranca fuera del imán (solo motor3)
     .timeout = 12000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 30000.0, // min.2000 max.30000
+    .acceleration = Z_GAME_ACCELERATION,
     .enablePin = MOTOR3_ENABLE};
