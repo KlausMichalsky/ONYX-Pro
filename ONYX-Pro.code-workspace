@@ -1,7 +1,16 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ]
+	"folders": [
+		{
+			"name": "Zero",
+			"path": "Zero"
+		},
+		{
+			"name": "Raspi",
+			"path": "Raspi"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
 }

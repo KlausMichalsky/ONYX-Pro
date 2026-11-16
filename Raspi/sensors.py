@@ -17,6 +17,7 @@
 
 from smbus2 import SMBus
 from gpiozero import Button
+from threading import Event
 import time
 
 
@@ -52,7 +53,7 @@ GPIOB = 0x13
 # BOTÓN DE CONFIRMACIÓN
 # ============================================================
 
-BUTTON_PIN = 18
+BUTTON_PIN = 26
 ROBOT_HOLD_SECONDS = 1.0
 SHUTDOWN_HOLD_SECONDS = 5.0
 
@@ -149,6 +150,8 @@ i2c = None
 mcps = []
 button = None
 
+shutdown_event = Event()
+
 
 # ============================================================
 # CLASE MCP23017
@@ -180,8 +183,34 @@ class MCP23017:
 # INICIALIZAR BOTON
 # ============================================================
 def init_button():
+    """Inicializa el botón y activa la detección independiente de apagado."""
+
     global button
-    button = Button(BUTTON_PIN, pull_up=True, bounce_time=0.05)
+
+    shutdown_event.clear()
+
+    button = Button(
+        BUTTON_PIN,
+        pull_up=True,
+        bounce_time=0.05,
+        hold_time=SHUTDOWN_HOLD_SECONDS,
+    )
+
+    button.when_held = request_shutdown
+
+
+def request_shutdown():
+    """Registra una solicitud de apagado sin bloquear el programa."""
+
+    shutdown_event.set()
+
+
+def check_shutdown_request():
+    """Interrumpe el flujo normal si se solicitó apagar la Raspberry Pi."""
+
+    if shutdown_event.is_set():
+        print("\n🛑 Apagado seguro solicitado mediante el botón.")
+        raise ShutdownRequested
 
 
 # ============================================================
@@ -191,7 +220,9 @@ def init_sensors():
     global i2c, mcps, button, previous_state
 
     # Abrir el bus I2C 1 de la Raspberry Pi
-    i2c = SMBus(1)
+    # solo si enciende por primera vez establece una coneccion nueva
+    if i2c is None:
+        i2c = SMBus(1)
 
     # Comprobar los cuatro MCP23017
     detected_addresses = []
@@ -435,7 +466,7 @@ def select_start_mode():
 
 
 def wait_button_release():
-    """Espera la liberación del botón o detecta una solicitud de apagado."""
+    """Espera la liberación del botón y comprueba solicitudes de apagado."""
 
     if button is None:
         return 0.0
@@ -444,20 +475,47 @@ def wait_button_release():
 
     while button.is_pressed:
 
+        check_shutdown_request()
+
         duration = time.monotonic() - start_time
 
         if duration >= SHUTDOWN_HOLD_SECONDS:
-            print("\n🛑 Apagado seguro solicitado.")
+            check_shutdown_request()
             raise ShutdownRequested
 
         time.sleep(0.01)
 
+    check_shutdown_request()
+
     return time.monotonic() - start_time
 
+
+def wait_for_new_game():
+    """Espera una pulsación corta para iniciar una nueva partida."""
+
+    if button is None:
+        raise RuntimeError("El botón no está inicializado.")
+
+    print("\n🏁 PARTIDA FINALIZADA")
+    print("♟️ Pulsá el botón para iniciar una nueva partida.")
+    print("🔌 Mantenelo pulsado 5 segundos para apagar.")
+
+    while not button.is_pressed:
+
+        check_shutdown_request()
+        time.sleep(0.05)
+
+    duration = wait_button_release()
+
+    print("🔄 Preparando una nueva partida...")
+
+    return True
 
 # ============================================================
 # DETECCIÓN DE ESTADO ESTABLE DE LOS SENSORES
 # ============================================================
+
+
 def read_stable_sensor_state():
     """Espera a que las piezas se asienten y estabiliza las lecturas."""
     time.sleep(0.5)
@@ -466,6 +524,7 @@ def read_stable_sensor_state():
     stable_reads = 0
 
     for _ in range(40):
+        check_shutdown_request()
         read_all_sensors()
         current_state = board_state.copy()
 
@@ -493,6 +552,9 @@ def wait_for_expected_state(expected_state, current_state):
     """Espera hasta que los sensores coincidan con el estado esperado."""
 
     while current_state != expected_state:
+
+        check_shutdown_request()
+
         time.sleep(0.1)
         read_all_sensors()
         current_state = board_state.copy()
@@ -508,6 +570,7 @@ def wait_for_human_confirmation(confirmed_state, change_history):
     """Espera el botón y devuelve el estado del tablero al confirmar."""
 
     while True:
+        check_shutdown_request()
         change_history.extend(detect_changes())
 
         if button_pressed():
@@ -589,8 +652,9 @@ def initialize_and_validate_sensors(expected_state):
         print("Cuando estén listas, pulsá el botón para comprobar el tablero.")
 
     while confirmed_state != expected_state:
-
+        check_shutdown_request()
         while not button_pressed():
+            check_shutdown_request()
             time.sleep(0.05)
 
         wait_button_release()

@@ -1,20 +1,17 @@
+
 # =======================================================================
 #                         🔹 O N Y X - P R O 🔹
 # =======================================================================
-#  Archivo   : main.py
-#  Autor     : Klaus Michalsky
-#  Fecha     : Oct-2026
-# -----------------------------------------------------------------------
-#  ▫️ DESCRIPCIÓN
+# Archivo   : main.py
+# Autor     : Klaus Michalsky
+# Descripción:
 #     - Control principal de ONYX-Pro
-#     - Gestión de partida de ajedrez
+#     - Gestión de partidas consecutivas
 #     - Comunicación con RP2040
 #     - Control de Stockfish
 # =======================================================================
 
-
 import signal
-
 import subprocess
 
 import sensors
@@ -40,16 +37,6 @@ from game import (
 
 from controller import run_game_loop
 
-initialize_serial()
-
-initialize_stockfish()
-
-initialize_robot()
-
-sensors.init_button()
-
-board = create_board()
-
 
 # =========================
 # SHUTDOWN
@@ -72,7 +59,8 @@ def shutdown():
 
 
 def handle_interrupt(signum, frame):
-    # Al pulsar Ctrl+C, se ejecutará el apagado del robot y se cerrará la conexión serie
+    """Gestiona la interrupción mediante Ctrl+C."""
+
     print("\n⚠️ Interrupción: apagando ONYX-Pro...")
     shutdown()
     raise SystemExit(130)
@@ -84,6 +72,7 @@ signal.signal(signal.SIGINT, handle_interrupt)
 # =========================
 # APAGADO SEGURO RASPBERRY PI
 # =========================
+
 def poweroff_system():
     """Apaga Raspberry Pi mediante systemd."""
 
@@ -103,79 +92,91 @@ def poweroff_system():
 
 
 # =========================
-# START
+# INICIALIZACIÓN GENERAL
 # =========================
+
+initialize_serial()
+initialize_stockfish()
+sensors.init_button()
 
 print("🤖 ONYX-Pro READY")
 
 
+# =========================
+# CICLO PRINCIPAL
+# =========================
+
 try:
 
-    do_homing()
+    while True:
 
-    # ---------------------------------------------------------
-    # SELECCIÓN DEL MODO DE JUEGO
-    # ---------------------------------------------------------
-    # Para seleccionar modo Humano/Robot mediante teclado,
-    # activar este bloque y desactivar el siguiente:
-    # mode = input("\n¿Quién empieza? (1=Humano, 2=Robot): ").strip()
-    # human_turn = (mode == "1")
-    # mirror_coordinates = (mode == "1")
+        # Crear un tablero nuevo para cada partida.
+        board = create_board()
 
-    # Para seleccionar modo Humano/Robot mediante USER-Button,
-    # activar este bloque y desactivar el anterior:
-    mode = sensors.select_start_mode()
-    human_turn = (mode == "1")
-    mirror_coordinates = (mode == "1")
+        # Preparar el robot y reiniciar el contador de capturas.
+        initialize_robot()
 
-    # Arranque automático al iniciar Raspberry Pi:
-    # sudo systemctl enable --now onyx.service
-    #
-    # Arranque manual desde terminal:
-    # sudo systemctl disable --now onyx.service
+        # Ejecutar homing antes de cada partida.
+        do_homing()
 
-    # =========================
-    # SENSORES Y BOTÓN
-    # =========================
-    expected_state = sensor_occupancy_from_board(
-        board,
-        mirror_coordinates,
-    )
+        # -----------------------------------------
+        # SELECCIÓN DEL MODO DE JUEGO
+        # -----------------------------------------
 
-    confirmed_state = sensors.initialize_and_validate_sensors(
-        expected_state,
-    )
+        mode = sensors.select_start_mode()
 
-    change_history = []
+        human_turn = (mode == "1")
+        mirror_coordinates = (mode == "1")
 
-    print("\n♟️ Iniciando partida...\n")
+        # -----------------------------------------
+        # SENSORES Y BOTÓN
+        # -----------------------------------------
 
-    # =========================
-    # LOOP PRINCIPAL
-    # =========================
+        expected_state = sensor_occupancy_from_board(
+            board,
+            mirror_coordinates,
+        )
 
-    run_game_loop(
-        board,
-        human_turn,
-        mirror_coordinates,
-        confirmed_state,
-        change_history,
-    )
+        confirmed_state = sensors.initialize_and_validate_sensors(
+            expected_state,
+        )
 
-    # =========================
-    # FIN PARTIDA
-    # =========================
+        change_history = []
 
-    if is_game_over(board):
-        print("\n🏁 Fin de partida")
-        print(get_result(board))
+        print("\n♟️ Iniciando partida...\n")
 
-        shutdown()
+        # -----------------------------------------
+        # LOOP DE LA PARTIDA
+        # -----------------------------------------
+
+        run_game_loop(
+            board,
+            human_turn,
+            mirror_coordinates,
+            confirmed_state,
+            change_history,
+        )
+
+        # -----------------------------------------
+        # FIN DE PARTIDA
+        # -----------------------------------------
+
+        if is_game_over(board):
+
+            print("\n🏁 Fin de partida")
+            print(get_result(board))
+
+            # Esperar una pulsación corta para una nueva partida.
+            sensors.wait_for_new_game()
+
+            print("\n🔄 Reiniciando ciclo de juego...\n")
+
+            continue
 
 
 except sensors.ShutdownRequested:
 
-    print("\n🛑 Apagado solicitado mediante el botón GPIO18.")
+    print("\n🛑 Apagado solicitado mediante el botón GPIO26.")
 
     shutdown()
     poweroff_system()
