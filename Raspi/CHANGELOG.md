@@ -11,10 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Changelog added
 
 ### Changed
-- User Button: BUTTON_PIN = 26
+- User button pin configuration: BUTTON_PIN = 26.
 
 ### Fixed
-- 
+- Starting a new game after ending the previous game with a 1-second button press.
+- Shutting down the Raspberry Pi after ending a game with a button press longer than 5 seconds.
 
 ### Removed
 - 
