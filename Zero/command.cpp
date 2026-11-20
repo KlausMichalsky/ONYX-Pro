@@ -125,7 +125,11 @@ Command parseCommand(const String &cmd) {
 void processCommand(const String &cmdStr) {
     String trimmedCmd = cmdStr;
     trimmedCmd.trim(); // eliminar espacios al iniciofinal,
-                       // justo después de crear trimmedCmd
+    // justo después de crear trimmedCmd
+
+    COMM.print("RX=[");
+    COMM.print(trimmedCmd);
+    COMM.println("]");
 
     Command cmd = parseCommand(trimmedCmd);
 
@@ -195,7 +199,7 @@ void processCommand(const String &cmdStr) {
                                 endSquare);
 
             if (parsed != 2) {
-                COMM.println("ERROR");
+                COMM.println("ERROR MOVE FORMAT");
                 break;
             }
 
@@ -280,7 +284,7 @@ void processCommand(const String &cmdStr) {
                                 attackerEndSquare);
 
             if (parsed != 3) {
-                COMM.println("ERROR");
+                COMM.println("ERROR REMOVE FORMAT");
                 break;
             }
 
