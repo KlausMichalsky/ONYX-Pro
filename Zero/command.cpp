@@ -269,36 +269,57 @@ void processCommand(const String &cmdStr) {
             break;
 
         case Command::REMOVE: {
-            char captureSquare[4] = {0};
-            char finalSquare[4] = {0};
+            char capturedSquare[4] = {0};
+            char attackerStartSquare[4] = {0};
+            char attackerEndSquare[4] = {0};
 
             int parsed = sscanf(trimmedCmd.c_str(),
-                                "REMOVE %3s %3s",
-                                captureSquare,
-                                finalSquare);
+                                "REMOVE %3s %3s %3s",
+                                capturedSquare,
+                                attackerStartSquare,
+                                attackerEndSquare);
 
-            if (parsed != 2) {
+            if (parsed != 3) {
                 COMM.println("ERROR");
                 break;
             }
 
-            float capT1, capT2;
-            float finT1, finT2;
+            float capturedT1, capturedT2;
+            float attackerStartT1, attackerStartT2;
+            float attackerEndT1, attackerEndT2;
 
-            if (!chessSquareToAngles(String(captureSquare), capT1, capT2)) {
-                COMM.println("ERROR CAPTURE");
+            if (!chessSquareToAngles(
+                    String(capturedSquare),
+                    capturedT1,
+                    capturedT2)) {
+                COMM.println("ERROR CAPTURED");
                 break;
             }
 
-            if (!chessSquareToAngles(String(finalSquare), finT1, finT2)) {
-                COMM.println("ERROR FINAL");
+            if (!chessSquareToAngles(
+                    String(attackerStartSquare),
+                    attackerStartT1,
+                    attackerStartT2)) {
+                COMM.println("ERROR ATTACKER START");
                 break;
             }
 
-            // 🔥 ahora sí: captura + movimiento final en FSM
-            if (startCaptureSequence(capT1, capT2, finT1, finT2)) {
+            if (!chessSquareToAngles(
+                    String(attackerEndSquare),
+                    attackerEndT1,
+                    attackerEndT2)) {
+                COMM.println("ERROR ATTACKER END");
+                break;
+            }
+
+            // Iniciar la secuencia completa de captura.
+            if (startCaptureSequence(
+                    capturedT1, capturedT2,
+                    attackerStartT1, attackerStartT2,
+                    attackerEndT1, attackerEndT2)) {
                 COMM.println("REMOVE STARTED");
             }
+
             break;
         }
 

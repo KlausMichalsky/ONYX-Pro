@@ -36,10 +36,12 @@ void startCastlingSequence(float kingS1, float kingS2,
                            float kingE1, float kingE2,
                            float rookS1, float rookS2,
                            float rookE1, float rookE2);
-bool startCaptureSequence(float captureT1_,
-                          float captureT2_,
-                          float finalT1_,
-                          float finalT2_);
+bool startCaptureSequence(float capturedT1, // posición de la pieza capturada. T1: ángulo del motor 1, el hombro.
+                          float capturedT2,
+                          float attackerStartT1, // posición inicial de la pieza atacante. T1: ángulo del motor 1, el hombro.
+                          float attackerStartT2,
+                          float attackerEndT1, // posición final de la pieza atacante. T1: ángulo del motor 1, el hombro.
+                          float attackerEndT2);
 bool resetCaptureCounter();
 void updateCaptureSequence();
 void resetXYState();

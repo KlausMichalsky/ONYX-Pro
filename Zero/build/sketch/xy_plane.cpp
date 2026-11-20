@@ -37,10 +37,15 @@ float startT1 = 0;
 float startT2 = 0;
 float endT1 = 0;
 float endT2 = 0;
-float captureT1 = 0;
-float captureT2 = 0;
-static float finalT1 = 0;
-static float finalT2 = 0;
+
+static float capturedT1 = 0;
+static float capturedT2 = 0;
+
+static float attackerStartT1 = 0;
+static float attackerStartT2 = 0;
+
+static float attackerEndT1 = 0;
+static float attackerEndT2 = 0;
 
 // Capture-Board: gestión de las 15 posiciones
 static uint8_t nextCaptureSlot = 1;
@@ -229,10 +234,12 @@ void startCastlingSequence(float kingS1, float kingS2,
 // INICIAR SECUENCIA DE CAPTURA COMPLETA (XY → Z → HOME)
 // -----------------------------------------------------------------------
 bool startCaptureSequence(
-    float captureT1_,
-    float captureT2_,
-    float finalT1_,
-    float finalT2_) {
+    float capturedT1_,
+    float capturedT2_,
+    float attackerStartT1_,
+    float attackerStartT2_,
+    float attackerEndT1_,
+    float attackerEndT2_) {
     // No iniciar otra captura si hay una secuencia activa.
     if (captureSeqState != CaptureSequenceState::IDLE ||
         moveSeqState != MoveSequenceState::IDLE ||
@@ -257,15 +264,19 @@ bool startCaptureSequence(
         return false;
     }
 
-    // Guardar destino y origen de la pieza atacante.
-    captureT1 = captureT1_;
-    captureT2 = captureT2_;
-    finalT1 = finalT1_;
-    finalT2 = finalT2_;
+    // Guardar las tres posiciones de la captura.
+    capturedT1 = capturedT1_;
+    capturedT2 = capturedT2_;
 
-    // Iniciar la captura.
+    attackerStartT1 = attackerStartT1_;
+    attackerStartT2 = attackerStartT2_;
+
+    attackerEndT1 = attackerEndT1_;
+    attackerEndT2 = attackerEndT2_;
+
+    // Iniciar la captura retirando la pieza enemiga.
     captureSeqState = CaptureSequenceState::CAPTURE_START;
-    moveToAngles(captureT1, captureT2);
+    moveToAngles(capturedT1, capturedT2);
 
     COMM.print("CAPTURE SLOT: ");
     COMM.println(nextCaptureSlot);
@@ -431,7 +442,7 @@ void updateCaptureSequence() {
         case CaptureSequenceState::MOVING_OWN_PIECE_START:
 
             if (!xyIsMoving()) {
-                moveToAngles(finalT1, finalT2);
+                moveToAngles(attackerStartT1, attackerStartT2);
                 captureSeqState = CaptureSequenceState::PICKING_OWN_PIECE;
             }
             break;
@@ -449,7 +460,7 @@ void updateCaptureSequence() {
         case CaptureSequenceState::MOVING_OWN_PIECE_END:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveToAngles(captureT1, captureT2);
+                moveToAngles(attackerEndT1, attackerEndT2);
                 captureSeqState = CaptureSequenceState::PLACING_OWN_PIECE;
             }
             break;
@@ -586,8 +597,14 @@ void resetXYState() {
     startT2 = 0;
     endT1 = 0;
     endT2 = 0;
-    captureT1 = 0;
-    captureT2 = 0;
+    capturedT1 = 0;
+    capturedT2 = 0;
+
+    attackerStartT1 = 0;
+    attackerStartT2 = 0;
+
+    attackerEndT1 = 0;
+    attackerEndT2 = 0;
 
     // =========================
     // RESET DE TIEMPOS
@@ -619,8 +636,14 @@ void cancelMoveSequence() {
     startT2 = 0;
     endT1 = 0;
     endT2 = 0;
-    captureT1 = 0;
-    captureT2 = 0;
+    capturedT1 = 0;
+    capturedT2 = 0;
+
+    attackerStartT1 = 0;
+    attackerStartT2 = 0;
+
+    attackerEndT1 = 0;
+    attackerEndT2 = 0;
 
     // opcional: reset estado XY también
     movingStateXY = MovingStateXY::IDLE;
