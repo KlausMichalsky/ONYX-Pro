@@ -79,7 +79,9 @@ def reset_robot():
 # SEND COMMAND
 # =========================
 def send_to_robot(cmd):
-    ser.write((cmd + "\n").encode())  # encode() convierte el texto en bytes
+    print(f"📤 Enviando al RP2040: [{cmd}]")
+    ser.write((cmd + "\n").encode())
+    # encode() convierte el texto en bytes
 # "e2e4\n"
 #       ↓ encode()
 # b"e2e4\n"
@@ -200,9 +202,14 @@ def shutdown_robot():
 
 def execute_robot_move(robot_move, capture_square=None, from_square=None):
     if capture_square is not None and from_square is not None:
-        send_to_robot(f"REMOVE {capture_square} {from_square}")
+        destination_square = robot_move[2:4]
+
+        send_to_robot(
+            f"REMOVE {capture_square} {from_square} {destination_square}"
+        )
         wait_any("MOVE DONE", "CAPTURE DONE")
         print("✅ Captura completada")
+
     else:
         send_to_robot(robot_move)
         wait_done()
