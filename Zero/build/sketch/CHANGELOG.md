@@ -10,10 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 - Changelog added
+- Dedicated Z-axis game speed and acceleration parameters.
 
 ### Changed
 - Increased motor speeds.
 - Adjusted motor acceleration values.
+- Updated Z-axis mechanical reduction configuration to 2:1 (reference only).
 
 ### Fixed
 - 

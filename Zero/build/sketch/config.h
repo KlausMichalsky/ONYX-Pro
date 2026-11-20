@@ -84,9 +84,9 @@ constexpr int MOTOR3_MICROSTEPPING = 8;
 
 // CONFIGURACION DEL TABLERO en MM
 // -----------------------------------------------------------------------
-constexpr float SQUARE_SIZE = 40.0f;                                     // Tamaño de casilla en mm
-constexpr float A1_OFFSET_X = -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f); // Distancia desde DOF1 a centro Fila A
-constexpr float A1_OFFSET_Y = 121.0f;                                    // Distancia desde DOF1 a centro Rango 1
+constexpr float SQUARE_SIZE = 40.0f;                                  // Tamaño de casilla en mm
+constexpr float OFFSET_X = -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f); // Distancia desde DOF1 a centro Fila A
+constexpr float OFFSET_Y = 121.0f;                                    // Distancia desde DOF1 a centro Rango 1
 
 // CONFIGURACION DE LOS BRAZOS EN MM
 // -----------------------------------------------------------------------

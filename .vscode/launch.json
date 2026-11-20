@@ -8,6 +8,14 @@
             "program": "${workspaceFolder}/scripts/release_changelog.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "ONYX-Pro Mechanical Calibration Manager",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/ONYX_Pro_Mechanical_Calibration_Manager.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }

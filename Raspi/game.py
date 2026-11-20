@@ -64,10 +64,24 @@ def is_capture(board, move):
     return board.is_capture(move)
 
 
-def get_capture_squares(move):
-    # Obtén las casillas de captura y de origen de move,
-    # y guárdalas en capture_square y from_square
-    capture_square = chess.square_name(move.to_square)
+def get_capture_squares(board, move):
+    """
+    Obtiene la casilla de la pieza capturada y la casilla de origen.
+
+    En una captura al paso, la pieza capturada no está
+    en la casilla de destino, sino detrás de ella.
+    """
+
+    capture_square_index = move.to_square
+
+    if board.is_en_passant(move):
+
+        if board.turn == chess.WHITE:
+            capture_square_index -= 8
+        else:
+            capture_square_index += 8
+
+    capture_square = chess.square_name(capture_square_index)
     from_square = chess.square_name(move.from_square)
 
     return capture_square, from_square
@@ -265,7 +279,7 @@ def prepare_robot_move(board, stockfish_move, mirror_coordinates=False):
     from_square = None
 
     if is_capture(board, move):
-        capture_square, from_square = get_capture_squares(move)
+        capture_square, from_square = get_capture_squares(board, move)
 
         if mirror_coordinates:
             capture_square = mirror_square(capture_square)

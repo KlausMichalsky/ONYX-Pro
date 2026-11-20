@@ -1,4 +1,4 @@
-z_axis.o: C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp \
+z_Axis.o: C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/stdlib_noniso.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/RP2040Version.h \

@@ -468,11 +468,11 @@ Discarded input sections
                 0x00000000       0x30 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
  .rodata.motor1Config
                 0x00000000       0x30 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .text          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
- .data          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
- .bss           0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .text          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
+ .data          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
+ .bss           0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .text._Z11zMoveTravelv
-                0x00000000        0x8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x00000000        0x8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .group         0x00000000        0x8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .text          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .data          0x00000000        0x0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
@@ -2719,29 +2719,29 @@ LOAD C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-
                 0x100053d4       0x74 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                 0x100053d4                _Z18cancelMoveSequencev
  .text._Z9zMoveHomev
-                0x10005448       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x10005448       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x10005448                _Z9zMoveHomev
  .text._Z9zMoveDownv
-                0x10005474       0x30 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x10005474       0x30 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x10005474                _Z9zMoveDownv
  .text._Z10magnetInitv
-                0x100054a4       0x24 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x100054a4       0x24 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x100054a4                _Z10magnetInitv
  .text._Z8magnetONv
-                0x100054c8       0x14 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x100054c8       0x14 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x100054c8                _Z8magnetONv
  .text._Z9magnetOFFv
-                0x100054dc       0x2a C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x100054dc       0x2a C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x100054dc                _Z9magnetOFFv
  *fill*         0x10005506        0x2 
  .text._Z10startZPickv
-                0x10005508       0x18 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x10005508       0x18 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x10005508                _Z10startZPickv
  .text._Z11startZPlacev
-                0x10005520       0x18 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x10005520       0x18 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x10005520                _Z11startZPlacev
  .text._Z7updateZv
-                0x10005538       0xc8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x10005538       0xc8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x10005538                _Z7updateZv
  .text._ZN7arduino5Print17availableForWriteEv
                 0x10005600        0x4 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
@@ -4685,7 +4685,7 @@ LOAD C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-
  .rodata._Z18cancelMoveSequencev.str1.1
                 0x1001cd70       0x17 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
  .rodata._Z7updateZv.str1.1
-                0x1001cd70       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x1001cd70       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .rodata._ZTV7TwoWire
                 0x1001cd70       0x50 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
                 0x1001cd70                _ZTV7TwoWire
@@ -5170,7 +5170,7 @@ LOAD C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-
                 0x20002368        0x4 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                 0x20002368                movingStateXY
  .bss.movingStateZ
-                0x2000236c        0x4 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x2000236c        0x4 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                 0x2000236c                movingStateZ
  .bss.next_buffer_ptr
                 0x20002370        0x4 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(dcd_rp2040.c.o)
@@ -5315,7 +5315,7 @@ LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
-LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
 LOAD C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\MultiStepper.cpp.o
@@ -5365,7 +5365,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000001aa       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
  .ARM.attributes
-                0x000001d6       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x000001d6       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .ARM.attributes
                 0x00000202       0x2c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .ARM.attributes
@@ -5719,7 +5719,7 @@ LOAD linker stubs
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
  .comment       0x00000012       0x13 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -5883,7 +5883,7 @@ LOAD linker stubs
  .debug_info    0x0001a94c     0x40b0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
  .debug_info    0x0001e9fc     0x4763 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
  .debug_info    0x0002315f     0x4b63 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .debug_info    0x00027cc2     0x3d14 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .debug_info    0x00027cc2     0x3d14 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_info    0x0002b9d6     0x7e92 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_info    0x00033868     0x5259 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
  .debug_info    0x00038ac1     0x6033 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -6062,7 +6062,7 @@ LOAD linker stubs
  .debug_abbrev  0x00002984      0x685 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
  .debug_abbrev  0x00003009      0x7c6 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
  .debug_abbrev  0x000037cf      0x848 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .debug_abbrev  0x00004017      0x630 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .debug_abbrev  0x00004017      0x630 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_abbrev  0x00004647      0xb76 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_abbrev  0x000051bd      0x8f6 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
  .debug_abbrev  0x00005ab3      0xa0e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -6560,7 +6560,7 @@ LOAD linker stubs
  .debug_aranges
                 0x00000258       0x88 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
  .debug_aranges
-                0x000002e0       0x60 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x000002e0       0x60 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_aranges
                 0x00000340      0x190 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_aranges
@@ -6917,7 +6917,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000350       0x8c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
  .debug_rnglists
-                0x000003dc       0x44 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                0x000003dc       0x44 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_rnglists
                 0x00000420      0x3cb C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_rnglists
@@ -7143,7 +7143,7 @@ LOAD linker stubs
  .debug_line    0x00004c46      0xb3d C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
  .debug_line    0x00005783      0xcd5 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
  .debug_line    0x00006458     0x137c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .debug_line    0x000077d4      0xa74 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .debug_line    0x000077d4      0xa74 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_line    0x00008248     0x2a45 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_line    0x0000ac8d     0x1677 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
  .debug_line    0x0000c304     0x1e5e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -7312,185 +7312,185 @@ LOAD linker stubs
  .debug_line    0x00056315       0x4a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_dvmd_tls.o)
  .debug_line    0x0005635f       0x55 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_ashldi3.o)
 
-.debug_str      0x00000000    0x15bb2
- .debug_str     0x00000000    0x15bb2 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
-                               0x2936 (size before relaxing)
- .debug_str     0x00015bb2     0x3245 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
- .debug_str     0x00015bb2     0x2608 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\communication.cpp.o
- .debug_str     0x00015bb2     0x2e3f C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
- .debug_str     0x00015bb2     0x2db7 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
- .debug_str     0x00015bb2     0x31e9 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
- .debug_str     0x00015bb2     0x2995 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
- .debug_str     0x00015bb2     0x2c21 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
- .debug_str     0x00015bb2     0x2fd4 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .debug_str     0x00015bb2     0x28ee C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
- .debug_str     0x00015bb2     0x44f7 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
- .debug_str     0x00015bb2     0x3097 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
- .debug_str     0x00015bb2     0x3713 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
- .debug_str     0x00015bb2     0x465e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUSB.cpp.o)
- .debug_str     0x00015bb2     0x3ee7 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(USB.cpp.o)
- .debug_str     0x00015bb2     0x2233 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(Print.cpp.o)
- .debug_str     0x00015bb2     0x173a C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(String.cpp.o)
- .debug_str     0x00015bb2     0x266e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(delay.cpp.o)
- .debug_str     0x00015bb2     0x476b C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(main.cpp.o)
- .debug_str     0x00015bb2     0x2918 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(malloc-lock.cpp.o)
- .debug_str     0x00015bb2      0xeeb C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(stdlib_noniso.cpp.o)
- .debug_str     0x00015bb2     0x2df5 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_digital.cpp.o)
- .debug_str     0x00015bb2     0x2bf9 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_private.cpp.o)
- .debug_str     0x00015bb2     0x260c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(CoreMutex.cpp.o)
- .debug_str     0x00015bb2     0x312d C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_analog.cpp.o)
- .debug_str     0x00015bb2      0x211 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(panic.c.o)
- .debug_str     0x00015bb2      0x34c C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(sync.c.o)
- .debug_str     0x00015bb2      0xcf5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(gpio.c.o)
- .debug_str     0x00015bb2      0xadb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(irq.c.o)
- .debug_str     0x00015bb2      0x806 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(mutex.c.o)
- .debug_str     0x00015bb2     0x1202 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(time.c.o)
- .debug_str     0x00015bb2      0xa4e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(timer.c.o)
- .debug_str     0x00015bb2      0x4a2 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(queue.c.o)
- .debug_str     0x00015bb2      0xa31 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(clocks.c.o)
- .debug_str     0x00015bb2      0x47e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(pll.c.o)
- .debug_str     0x00015bb2      0x385 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(vreg.c.o)
- .debug_str     0x00015bb2      0x372 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(bootrom.c.o)
- .debug_str     0x00015bb2      0x5ff C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(dma.c.o)
- .debug_str     0x00015bb2      0x4c5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(exception.c.o)
- .debug_str     0x00015bb2     0x1063 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(i2c.c.o)
- .debug_str     0x00015bb2      0xc5d C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(uart.c.o)
- .debug_str     0x00015bb2       0xb0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(bit_ops_aeabi.S.o)
- .debug_str     0x00015bb2       0xb3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(divider_hardware.S.o)
- .debug_str     0x00015bb2       0xb5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_aeabi_rp2040.S.o)
- .debug_str     0x00015bb2      0x2db C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_init_rom_rp2040.c.o)
- .debug_str     0x00015bb2       0xbb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_v1_rom_shim_rp2040.S.o)
- .debug_str     0x00015bb2       0xb3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_aeabi_rp2040.S.o)
- .debug_str     0x00015bb2      0x2c0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_init_rom_rp2040.c.o)
- .debug_str     0x00015bb2      0x54e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_math.c.o)
- .debug_str     0x00015bb2       0xb9 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_v1_rom_shim_rp2040.S.o)
- .debug_str     0x00015bb2       0xb9 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(pico_int64_ops_aeabi.S.o)
- .debug_str     0x00015bb2       0xb0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(mem_ops_aeabi.S.o)
- .debug_str     0x00015bb2      0xd3a C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(multicore.c.o)
- .debug_str     0x00015bb2      0x291 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(unique_id.c.o)
- .debug_str     0x00015bb2      0x2b2 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime.c.o)
- .debug_str     0x00015bb2      0x7e5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime_init.c.o)
- .debug_str     0x00015bb2      0x4ba C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime_init_clocks.c.o)
- .debug_str     0x00015bb2       0xa4 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(crt0.S.o)
- .debug_str     0x00015bb2     0x1c7f C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(usbd.c.o)
- .debug_str     0x00015bb2      0x6fc C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(usbd_control.c.o)
- .debug_str     0x00015bb2     0x178b C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(cdc_device.c.o)
- .debug_str     0x00015bb2      0xe3d C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(tusb.c.o)
- .debug_str     0x00015bb2      0x649 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(tusb_fifo.c.o)
- .debug_str     0x00015bb2      0x3a3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(claim.c.o)
- .debug_str     0x00015bb2      0x25f C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(sync_spin_lock.c.o)
- .debug_str     0x00015bb2      0x22b C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(lock_core.c.o)
- .debug_str     0x00015bb2      0x2eb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(critical_section.c.o)
- .debug_str     0x00015bb2      0x40c C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(timeout_helper.c.o)
- .debug_str     0x00015bb2      0x2ad C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(ticks.c.o)
- .debug_str     0x00015bb2      0x262 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(xosc.c.o)
- .debug_str     0x00015bb2      0x7ca C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(flash.c.o)
- .debug_str     0x00015bb2     0x1276 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(dcd_rp2040.c.o)
- .debug_str     0x00015bb2      0xa58 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(rp2040_usb.c.o)
- .debug_str     0x00015bb2      0x9f4 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(rp2040_usb_device_enumeration.c.o)
- .debug_str     0x00015bb2      0x219 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(platform.c.o)
- .debug_str     0x00015bb2      0x18f C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
- .debug_str     0x00015bb2      0x19a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_opv.o)
- .debug_str     0x00015bb2      0x6a5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(guard.o)
- .debug_str     0x00015bb2      0x372 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
- .debug_str     0x00015bb2      0x199 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_opv.o)
- .debug_str     0x00015bb2      0x319 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
- .debug_str     0x00015bb2      0x947 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
- .debug_str     0x00015bb2      0x1a2 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strncpy.o)
- .debug_str     0x00015bb2      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-toupper.o)
- .debug_str     0x00015bb2      0x4c8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-assert.o)
- .debug_str     0x00015bb2      0x490 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-impure.o)
- .debug_str     0x00015bb2      0x18d C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-itoa.o)
- .debug_str     0x00015bb2      0x554 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-puts.o)
- .debug_str     0x00015bb2      0xa60 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtod.o)
- .debug_str     0x00015bb2      0x70e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-locale.o)
- .debug_str     0x00015bb2      0x94c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfprintf.o)
- .debug_str     0x00015bb2      0x88a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-gdtoa-gethex.o)
- .debug_str     0x00015bb2      0x4e5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sscanf.o)
- .debug_str     0x00015bb2      0x4d3 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vprintf.o)
- .debug_str     0x00015bb2      0x6b6 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mbtowc_r.o)
- .debug_str     0x00015bb2      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isspace.o)
- .debug_str     0x00015bb2      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strncmp.o)
- .debug_str     0x00015bb2      0x195 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strlen-stub.o)
- .debug_str     0x00015bb2      0x1ab C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-memmove.o)
- .debug_str     0x00015bb2      0x71b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-findfp.o)
- .debug_str     0x00015bb2      0x4a0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-calloc.o)
- .debug_str     0x00015bb2      0x55a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fclose.o)
- .debug_str     0x00015bb2      0x17b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-abort.o)
- .debug_str     0x00015bb2      0x1a1 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-utoa.o)
- .debug_str     0x00015bb2      0x4e2 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-callocr.o)
- .debug_str     0x00015bb2      0x4a5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-realloc.o)
- .debug_str     0x00015bb2      0x4d1 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fiprintf.o)
- .debug_str     0x00015bb2      0x6b8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mallocr.o)
- .debug_str     0x00015bb2      0x19c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-memchr-stub.o)
- .debug_str     0x00015bb2      0x87d C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-dtoa.o)
- .debug_str     0x00015bb2      0x176 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strcpy.o)
- .debug_str     0x00015bb2      0x60e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-freer.o)
- .debug_str     0x00015bb2      0x945 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfscanf.o)
- .debug_str     0x00015bb2      0x721 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtol.o)
- .debug_str     0x00015bb2      0x6bd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-wctomb_r.o)
- .debug_str     0x00015bb2      0x489 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-errno.o)
- .debug_str     0x00015bb2      0x4b4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-malloc.o)
- .debug_str     0x00015bb2      0x189 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-iswspace.o)
- .debug_str     0x00015bb2      0x6bb C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mbrtowc.o)
- .debug_str     0x00015bb2      0x583 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-reallocr.o)
- .debug_str     0x00015bb2      0x51a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mlock.o)
- .debug_str     0x00015bb2      0x499 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sbrkr.o)
- .debug_str     0x00015bb2       0x97 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strcmp.o)
- .debug_str     0x00015bb2      0x19e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-exit.o)
- .debug_str     0x00015bb2      0x171 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ctype_.o)
- .debug_str     0x00015bb2      0x1b5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-atexit.o)
- .debug_str     0x00015bb2      0x4d9 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ssprint_r.o)
- .debug_str     0x00015bb2      0x541 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fvwrite.o)
- .debug_str     0x00015bb2      0x8e7 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfiscanf.o)
- .debug_str     0x00015bb2      0x2b3 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-gdtoa-hexnan.o)
- .debug_str     0x00015bb2      0x4fd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-stdio.o)
- .debug_str     0x00015bb2      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isalpha.o)
- .debug_str     0x00015bb2      0x562 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fflush.o)
- .debug_str     0x00015bb2      0x516 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-signal.o)
- .debug_str     0x00015bb2      0x18a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-s_nan.o)
- .debug_str     0x00015bb2      0x190 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-sf_nan.o)
- .debug_str     0x00015bb2      0x1db C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-s_frexp.o)
- .debug_str     0x00015bb2      0x4a0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fwalk.o)
- .debug_str     0x00015bb2      0x72b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoll.o)
- .debug_str     0x00015bb2      0x7ba C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mprec.o)
- .debug_str     0x00015bb2      0x6d6 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-localeconv.o)
- .debug_str     0x00015bb2      0xa32 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vfprintf.o)
- .debug_str     0x00015bb2      0x17e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sccl.o)
- .debug_str     0x00015bb2      0x181 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sysconf.o)
- .debug_str     0x00015bb2      0x72c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoul.o)
- .debug_str     0x00015bb2      0x4af C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-reent.o)
- .debug_str     0x00015bb2      0x673 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-iswspace_l.o)
- .debug_str     0x00015bb2      0x730 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoull.o)
- .debug_str     0x00015bb2      0x8dd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vfiprintf.o)
- .debug_str     0x00015bb2      0x4cb C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ssputs_r.o)
- .debug_str     0x00015bb2      0x4c0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-wsetup.o)
- .debug_str     0x00015bb2      0x4ce C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sprintf.o)
- .debug_str     0x00015bb2      0x294 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-__call_atexit.o)
- .debug_str     0x00015bb2      0x496 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-writer.o)
- .debug_str     0x00015bb2      0x486 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-closer.o)
- .debug_str     0x00015bb2      0x494 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-lseekr.o)
- .debug_str     0x00015bb2      0x2b4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-__atexit.o)
- .debug_str     0x00015bb2      0x494 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-readr.o)
- .debug_str     0x00015bb2      0x623 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-makebuf.o)
- .debug_str     0x00015bb2      0x538 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ungetc.o)
- .debug_str     0x00015bb2      0x4ac C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-signalr.o)
- .debug_str     0x00015bb2      0x4d9 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sprint_r.o)
- .debug_str     0x00015bb2      0x5d8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fstatr.o)
- .debug_str     0x00015bb2      0x490 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isattyr.o)
- .debug_str     0x00015bb2      0x6be C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(lock.cpp.o)
- .debug_str     0x00015bb2     0x2b79 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(posix.cpp.o)
- .debug_str     0x00015bb2      0x410 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(hid_device.c.o)
- .debug_str     0x00015bb2      0x417 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(midi_device.c.o)
- .debug_str     0x00015bb2      0x40f C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(msc_device.c.o)
- .debug_str     0x00015bb2      0x410 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(ncm_device.c.o)
- .debug_str     0x00015bb2      0x294 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(newlib_interface.c.o)
- .debug_str     0x00015bb2       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_sqi.o)
- .debug_str     0x00015bb2       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_uqi.o)
- .debug_str     0x00015bb2       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_shi.o)
- .debug_str     0x00015bb2       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_uhi.o)
- .debug_str     0x00015bb2       0xa4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_dvmd_tls.o)
- .debug_str     0x00015bb2       0x9f C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_ashldi3.o)
+.debug_str      0x00000000    0x15bac
+ .debug_str     0x00000000    0x15bac C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
+                               0x2930 (size before relaxing)
+ .debug_str     0x00015bac     0x323f C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
+ .debug_str     0x00015bac     0x2602 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\communication.cpp.o
+ .debug_str     0x00015bac     0x2e39 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
+ .debug_str     0x00015bac     0x2db1 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
+ .debug_str     0x00015bac     0x31e3 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
+ .debug_str     0x00015bac     0x298f C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
+ .debug_str     0x00015bac     0x2c1b C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
+ .debug_str     0x00015bac     0x2fce C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
+ .debug_str     0x00015bac     0x28e8 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
+ .debug_str     0x00015bac     0x44f7 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
+ .debug_str     0x00015bac     0x3097 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
+ .debug_str     0x00015bac     0x3713 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
+ .debug_str     0x00015bac     0x465e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUSB.cpp.o)
+ .debug_str     0x00015bac     0x3ee7 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(USB.cpp.o)
+ .debug_str     0x00015bac     0x2233 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(Print.cpp.o)
+ .debug_str     0x00015bac     0x173a C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(String.cpp.o)
+ .debug_str     0x00015bac     0x266e C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(delay.cpp.o)
+ .debug_str     0x00015bac     0x476b C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(main.cpp.o)
+ .debug_str     0x00015bac     0x2918 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(malloc-lock.cpp.o)
+ .debug_str     0x00015bac      0xeeb C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(stdlib_noniso.cpp.o)
+ .debug_str     0x00015bac     0x2df5 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_digital.cpp.o)
+ .debug_str     0x00015bac     0x2bf9 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_private.cpp.o)
+ .debug_str     0x00015bac     0x260c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(CoreMutex.cpp.o)
+ .debug_str     0x00015bac     0x312d C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_analog.cpp.o)
+ .debug_str     0x00015bac      0x211 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(panic.c.o)
+ .debug_str     0x00015bac      0x34c C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(sync.c.o)
+ .debug_str     0x00015bac      0xcf5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(gpio.c.o)
+ .debug_str     0x00015bac      0xadb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(irq.c.o)
+ .debug_str     0x00015bac      0x806 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(mutex.c.o)
+ .debug_str     0x00015bac     0x1202 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(time.c.o)
+ .debug_str     0x00015bac      0xa4e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(timer.c.o)
+ .debug_str     0x00015bac      0x4a2 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(queue.c.o)
+ .debug_str     0x00015bac      0xa31 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(clocks.c.o)
+ .debug_str     0x00015bac      0x47e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(pll.c.o)
+ .debug_str     0x00015bac      0x385 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(vreg.c.o)
+ .debug_str     0x00015bac      0x372 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(bootrom.c.o)
+ .debug_str     0x00015bac      0x5ff C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(dma.c.o)
+ .debug_str     0x00015bac      0x4c5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(exception.c.o)
+ .debug_str     0x00015bac     0x1063 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(i2c.c.o)
+ .debug_str     0x00015bac      0xc5d C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(uart.c.o)
+ .debug_str     0x00015bac       0xb0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(bit_ops_aeabi.S.o)
+ .debug_str     0x00015bac       0xb3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(divider_hardware.S.o)
+ .debug_str     0x00015bac       0xb5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_aeabi_rp2040.S.o)
+ .debug_str     0x00015bac      0x2db C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_init_rom_rp2040.c.o)
+ .debug_str     0x00015bac       0xbb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(double_v1_rom_shim_rp2040.S.o)
+ .debug_str     0x00015bac       0xb3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_aeabi_rp2040.S.o)
+ .debug_str     0x00015bac      0x2c0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_init_rom_rp2040.c.o)
+ .debug_str     0x00015bac      0x54e C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_math.c.o)
+ .debug_str     0x00015bac       0xb9 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(float_v1_rom_shim_rp2040.S.o)
+ .debug_str     0x00015bac       0xb9 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(pico_int64_ops_aeabi.S.o)
+ .debug_str     0x00015bac       0xb0 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(mem_ops_aeabi.S.o)
+ .debug_str     0x00015bac      0xd3a C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(multicore.c.o)
+ .debug_str     0x00015bac      0x291 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(unique_id.c.o)
+ .debug_str     0x00015bac      0x2b2 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime.c.o)
+ .debug_str     0x00015bac      0x7e5 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime_init.c.o)
+ .debug_str     0x00015bac      0x4ba C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(runtime_init_clocks.c.o)
+ .debug_str     0x00015bac       0xa4 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(crt0.S.o)
+ .debug_str     0x00015bac     0x1c7f C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(usbd.c.o)
+ .debug_str     0x00015bac      0x6fc C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(usbd_control.c.o)
+ .debug_str     0x00015bac     0x178b C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(cdc_device.c.o)
+ .debug_str     0x00015bac      0xe3d C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(tusb.c.o)
+ .debug_str     0x00015bac      0x649 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(tusb_fifo.c.o)
+ .debug_str     0x00015bac      0x3a3 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(claim.c.o)
+ .debug_str     0x00015bac      0x25f C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(sync_spin_lock.c.o)
+ .debug_str     0x00015bac      0x22b C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(lock_core.c.o)
+ .debug_str     0x00015bac      0x2eb C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(critical_section.c.o)
+ .debug_str     0x00015bac      0x40c C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(timeout_helper.c.o)
+ .debug_str     0x00015bac      0x2ad C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(ticks.c.o)
+ .debug_str     0x00015bac      0x262 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(xosc.c.o)
+ .debug_str     0x00015bac      0x7ca C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(flash.c.o)
+ .debug_str     0x00015bac     0x1276 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(dcd_rp2040.c.o)
+ .debug_str     0x00015bac      0xa58 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(rp2040_usb.c.o)
+ .debug_str     0x00015bac      0x9f4 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(rp2040_usb_device_enumeration.c.o)
+ .debug_str     0x00015bac      0x219 C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(platform.c.o)
+ .debug_str     0x00015bac      0x18f C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_ops.o)
+ .debug_str     0x00015bac      0x19a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_opv.o)
+ .debug_str     0x00015bac      0x6a5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(guard.o)
+ .debug_str     0x00015bac      0x372 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_op.o)
+ .debug_str     0x00015bac      0x199 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_opv.o)
+ .debug_str     0x00015bac      0x319 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(del_op.o)
+ .debug_str     0x00015bac      0x947 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libstdc++.a(new_handler.o)
+ .debug_str     0x00015bac      0x1a2 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strncpy.o)
+ .debug_str     0x00015bac      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-toupper.o)
+ .debug_str     0x00015bac      0x4c8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-assert.o)
+ .debug_str     0x00015bac      0x490 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-impure.o)
+ .debug_str     0x00015bac      0x18d C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-itoa.o)
+ .debug_str     0x00015bac      0x554 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-puts.o)
+ .debug_str     0x00015bac      0xa60 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtod.o)
+ .debug_str     0x00015bac      0x70e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-locale.o)
+ .debug_str     0x00015bac      0x94c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfprintf.o)
+ .debug_str     0x00015bac      0x88a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-gdtoa-gethex.o)
+ .debug_str     0x00015bac      0x4e5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sscanf.o)
+ .debug_str     0x00015bac      0x4d3 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vprintf.o)
+ .debug_str     0x00015bac      0x6b6 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mbtowc_r.o)
+ .debug_str     0x00015bac      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isspace.o)
+ .debug_str     0x00015bac      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strncmp.o)
+ .debug_str     0x00015bac      0x195 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strlen-stub.o)
+ .debug_str     0x00015bac      0x1ab C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-memmove.o)
+ .debug_str     0x00015bac      0x71b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-findfp.o)
+ .debug_str     0x00015bac      0x4a0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-calloc.o)
+ .debug_str     0x00015bac      0x55a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fclose.o)
+ .debug_str     0x00015bac      0x17b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-abort.o)
+ .debug_str     0x00015bac      0x1a1 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-utoa.o)
+ .debug_str     0x00015bac      0x4e2 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-callocr.o)
+ .debug_str     0x00015bac      0x4a5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-realloc.o)
+ .debug_str     0x00015bac      0x4d1 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fiprintf.o)
+ .debug_str     0x00015bac      0x6b8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mallocr.o)
+ .debug_str     0x00015bac      0x19c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-memchr-stub.o)
+ .debug_str     0x00015bac      0x87d C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-dtoa.o)
+ .debug_str     0x00015bac      0x176 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strcpy.o)
+ .debug_str     0x00015bac      0x60e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-freer.o)
+ .debug_str     0x00015bac      0x945 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfscanf.o)
+ .debug_str     0x00015bac      0x721 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtol.o)
+ .debug_str     0x00015bac      0x6bd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-wctomb_r.o)
+ .debug_str     0x00015bac      0x489 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-errno.o)
+ .debug_str     0x00015bac      0x4b4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-malloc.o)
+ .debug_str     0x00015bac      0x189 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-iswspace.o)
+ .debug_str     0x00015bac      0x6bb C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mbrtowc.o)
+ .debug_str     0x00015bac      0x583 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-reallocr.o)
+ .debug_str     0x00015bac      0x51a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mlock.o)
+ .debug_str     0x00015bac      0x499 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sbrkr.o)
+ .debug_str     0x00015bac       0x97 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strcmp.o)
+ .debug_str     0x00015bac      0x19e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-exit.o)
+ .debug_str     0x00015bac      0x171 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ctype_.o)
+ .debug_str     0x00015bac      0x1b5 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-atexit.o)
+ .debug_str     0x00015bac      0x4d9 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ssprint_r.o)
+ .debug_str     0x00015bac      0x541 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fvwrite.o)
+ .debug_str     0x00015bac      0x8e7 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-svfiscanf.o)
+ .debug_str     0x00015bac      0x2b3 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-gdtoa-hexnan.o)
+ .debug_str     0x00015bac      0x4fd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-stdio.o)
+ .debug_str     0x00015bac      0x17a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isalpha.o)
+ .debug_str     0x00015bac      0x562 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fflush.o)
+ .debug_str     0x00015bac      0x516 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-signal.o)
+ .debug_str     0x00015bac      0x18a C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-s_nan.o)
+ .debug_str     0x00015bac      0x190 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-sf_nan.o)
+ .debug_str     0x00015bac      0x1db C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libm_a-s_frexp.o)
+ .debug_str     0x00015bac      0x4a0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fwalk.o)
+ .debug_str     0x00015bac      0x72b C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoll.o)
+ .debug_str     0x00015bac      0x7ba C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-mprec.o)
+ .debug_str     0x00015bac      0x6d6 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-localeconv.o)
+ .debug_str     0x00015bac      0xa32 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vfprintf.o)
+ .debug_str     0x00015bac      0x17e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sccl.o)
+ .debug_str     0x00015bac      0x181 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sysconf.o)
+ .debug_str     0x00015bac      0x72c C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoul.o)
+ .debug_str     0x00015bac      0x4af C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-reent.o)
+ .debug_str     0x00015bac      0x673 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-iswspace_l.o)
+ .debug_str     0x00015bac      0x730 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-strtoull.o)
+ .debug_str     0x00015bac      0x8dd C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-vfiprintf.o)
+ .debug_str     0x00015bac      0x4cb C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ssputs_r.o)
+ .debug_str     0x00015bac      0x4c0 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-wsetup.o)
+ .debug_str     0x00015bac      0x4ce C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sprintf.o)
+ .debug_str     0x00015bac      0x294 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-__call_atexit.o)
+ .debug_str     0x00015bac      0x496 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-writer.o)
+ .debug_str     0x00015bac      0x486 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-closer.o)
+ .debug_str     0x00015bac      0x494 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-lseekr.o)
+ .debug_str     0x00015bac      0x2b4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-__atexit.o)
+ .debug_str     0x00015bac      0x494 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-readr.o)
+ .debug_str     0x00015bac      0x623 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-makebuf.o)
+ .debug_str     0x00015bac      0x538 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-ungetc.o)
+ .debug_str     0x00015bac      0x4ac C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-signalr.o)
+ .debug_str     0x00015bac      0x4d9 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-sprint_r.o)
+ .debug_str     0x00015bac      0x5d8 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-fstatr.o)
+ .debug_str     0x00015bac      0x490 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-isattyr.o)
+ .debug_str     0x00015bac      0x6be C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(lock.cpp.o)
+ .debug_str     0x00015bac     0x2b79 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(posix.cpp.o)
+ .debug_str     0x00015bac      0x410 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(hid_device.c.o)
+ .debug_str     0x00015bac      0x417 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(midi_device.c.o)
+ .debug_str     0x00015bac      0x40f C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(msc_device.c.o)
+ .debug_str     0x00015bac      0x410 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(ncm_device.c.o)
+ .debug_str     0x00015bac      0x294 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(newlib_interface.c.o)
+ .debug_str     0x00015bac       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_sqi.o)
+ .debug_str     0x00015bac       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_uqi.o)
+ .debug_str     0x00015bac       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_shi.o)
+ .debug_str     0x00015bac       0x9e C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_thumb1_case_uhi.o)
+ .debug_str     0x00015bac       0xa4 C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_dvmd_tls.o)
+ .debug_str     0x00015bac       0x9f C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/thumb\libgcc.a(_ashldi3.o)
 
 .debug_frame    0x00000000     0x7b64
  .debug_frame   0x00000000       0x48 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
@@ -7502,7 +7502,7 @@ LOAD linker stubs
  .debug_frame   0x000003d8       0xbc C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
  .debug_frame   0x00000494      0x114 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
  .debug_frame   0x000005a8      0x180 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
- .debug_frame   0x00000728       0xec C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+ .debug_frame   0x00000728       0xec C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
  .debug_frame   0x00000814      0x4c0 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
  .debug_frame   0x00000cd4      0x40c C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
  .debug_frame   0x000010e0      0x314 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -7702,7 +7702,7 @@ Serial                                            C:\Users\Klaus\Documents\ONYX-
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\communication.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 Serial1                                           C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 Serial2                                           C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -7734,11 +7734,11 @@ _ITM_registerTMCloneTable                         C:/Users/Klaus/AppData/Local/A
 _PathLocale                                       C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-locale.o)
 _Z10coreUpdatev                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
-_Z10magnetInitv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z10magnetInitv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
 _Z10motorsInitv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
-_Z10startZPickv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z10startZPickv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 _Z10xyIsMovingv                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
@@ -7759,10 +7759,10 @@ _Z11readCommandv                                  C:\Users\Klaus\Documents\ONYX-
 _Z11sensorsInitv                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
 _Z11serialEventv                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUSB.cpp.o)
-_Z11startZPlacev                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z11startZPlacev                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
-_Z11zMoveTravelv                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z11zMoveTravelv                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
 _Z12homingInitXYR8HomingXY                        C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
@@ -7772,7 +7772,7 @@ _Z12homingStartZR12AccelStepperRK11MotorConfigR7HomingZi C:\Users\Klaus\Document
 _Z12homingStepXYR12AccelStepperRK11MotorConfigR8HomingXYi C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 _Z12motorEnableZv                                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
 _Z12moveToAnglesff                                C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 _Z12moveToHomeXYv                                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
@@ -7866,18 +7866,18 @@ _Z5main1v                                         C:\Users\Klaus\Documents\ONYX-
 _Z6__loopv                                        C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(main.cpp.o)
 _Z6_probeihhi                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
 _Z7hexdumpPKvmh                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(main.cpp.o)
-_Z7updateZv                                       C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z7updateZv                                       C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 _Z8coreInitv                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
-_Z8magnetONv                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z8magnetONv                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
 _Z8updateXYv                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
-_Z9magnetOFFv                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z9magnetOFFv                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 _Z9motorName7MotorID                              C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
-_Z9zMoveDownv                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
-_Z9zMoveHomev                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+_Z9zMoveDownv                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
+_Z9zMoveHomev                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
 _ZN10SerialUART10_handleIRQEb                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
 _ZN10SerialUART11setFIFOSizeEj                    C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
 _ZN10SerialUART14setPollingModeEb                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
@@ -7904,14 +7904,14 @@ _ZN10SerialUARTC1EP9uart_insthhhh                 C:\Users\Klaus\Documents\ONYX-
 _ZN10SerialUARTC2EP9uart_insthhhh                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
 _ZN10SerialUARTcvbEv                              C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(SerialUART.cpp.o)
 _ZN12AccelStepper11setMaxSpeedEf                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper11stepForwardEv                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
 _ZN12AccelStepper12accelerationEv                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
 _ZN12AccelStepper12distanceToGoEv                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\MultiStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper12setEnablePinEh                 C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
@@ -7928,7 +7928,7 @@ _ZN12AccelStepper15currentPositionEv              C:\Users\Klaus\Documents\ONYX-
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper15setAccelerationEf              C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper15setPinsInvertedEbbb            C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
@@ -7941,7 +7941,7 @@ _ZN12AccelStepper18setCurrentPositionEl           C:\Users\Klaus\Documents\ONYX-
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper3runEv                           C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper4moveEl                          C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
@@ -7960,7 +7960,7 @@ _ZN12AccelStepper5step6El                         C:\Users\Klaus\Documents\ONYX-
 _ZN12AccelStepper5step8El                         C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
 _ZN12AccelStepper6moveToEl                        C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\MultiStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
 _ZN12AccelStepper8maxSpeedEv                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
@@ -8067,7 +8067,7 @@ _ZN7arduino5Print5writeEPKhj                      C:\Users\Klaus\Documents\ONYX-
 _ZN7arduino5Print6printfEPKcz                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(Print.cpp.o)
 _ZN7arduino5Print7printlnEPKNS_19__FlashStringHelperE C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(Print.cpp.o)
 _ZN7arduino5Print7printlnEPKc                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(Print.cpp.o)
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
@@ -8452,7 +8452,7 @@ __gnu_thumb1_case_uqi                             C:/Users/Klaus/AppData/Local/A
                                                   C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0/lib/rp2040/libpico.a(usbd.c.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_digital.cpp.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 __hexdig                                          C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/tools/pqt-gcc/4.1.0-1aec55e/bin/../lib/gcc/arm-none-eabi/14.3.0/../../../../arm-none-eabi/lib/thumb\libc.a(libc_a-gdtoa-gethex.o)
@@ -9553,7 +9553,7 @@ ddiv_shim                                         C:\Users\Klaus\AppData\Local\A
 delay                                             C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(delay.cpp.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_analog.cpp.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(main.cpp.o)
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\utils.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
@@ -9570,7 +9570,7 @@ digitalRead                                       C:\Users\Klaus\Documents\ONYX-
 digitalWrite                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_digital.cpp.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
@@ -10087,7 +10087,7 @@ motor2Homing                                      C:\Users\Klaus\Documents\ONYX-
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\Zero.ino.cpp.o
 motor3                                            C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 motor3Config                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 motor3Homing                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o
@@ -10099,7 +10099,7 @@ motorToHome                                       C:\Users\Klaus\Documents\ONYX-
 moveSeqState                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.cpp.o
 movingStateXY                                     C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
-movingStateZ                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+movingStateZ                                      C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\command.cpp.o
 mscd_control_xfer_cb                              C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(msc_device.c.o)
@@ -10208,7 +10208,7 @@ pico_get_unique_board_id_string                   C:\Users\Klaus\AppData\Local\A
 pinMode                                           C:\Users\Klaus\Documents\ONYX-Pro\Zero\build/core\core.a(wiring_digital.cpp.o)
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\AccelStepper\AccelStepper.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\libraries\Wire\Wire.a(Wire.cpp.o)
-                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_axis.cpp.o
+                                                  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\z_Axis.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.cpp.o
                                                   C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.cpp.o

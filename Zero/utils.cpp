@@ -82,8 +82,8 @@ bool chessSquareToXY(
     int rankIndex = rank - '1'; // '1' -> 0, '2' -> 1, ..., '8' -> 7
 
     // Convertir a coordenadas en centro de casillas
-    x = A1_OFFSET_X + (fileIndex * SQUARE_SIZE);
-    y = A1_OFFSET_Y + (rankIndex * SQUARE_SIZE);
+    x = OFFSET_X + (fileIndex * SQUARE_SIZE);
+    y = OFFSET_Y + (rankIndex * SQUARE_SIZE);
 
     return true;
 }
