@@ -1,4 +1,5 @@
 #line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\xy_plane.cpp"
+
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================
@@ -23,18 +24,21 @@
 
 // VARIABLES LOCALES
 // -----------------------------------------------------------------------
+
 static float targetShoulderAngle = 0;
 static float targetElbowAngle = 0;
 static unsigned long settleStart = 0;
 
 // REGISTRO DE CORRECCIÓN ANGULAR MÁXIMA POR JUGADA
 // -----------------------------------------------------------------------
+
 static float maxCorrectionJ1 = 0.0f;
 static float maxCorrectionJ2 = 0.0f;
 
 // =======================================================================
 // INFORME DE CORRECCIONES ANGULARES POR JUGADA
 // =======================================================================
+
 static void reportAndResetMaxCorrections() {
     COMM.println("XY CORRECTION REPORT");
 
@@ -52,6 +56,7 @@ static void reportAndResetMaxCorrections() {
 
 // DEFINICION DE MAQUINA DE ESTADOS PARA MOVIMIENTO XY-PLANE
 // -----------------------------------------------------------------------
+
 MovingStateXY movingStateXY = MovingStateXY::IDLE;
 MoveSequenceState moveSeqState = MoveSequenceState::IDLE;
 CaptureSequenceState captureSeqState = CaptureSequenceState::IDLE;
@@ -87,12 +92,14 @@ extern float currentElbowAngle;
 
 // STATUS
 // -----------------------------------------------------------------------
+
 bool xyIsMoving() {
     return movingStateXY != MovingStateXY::IDLE;
 }
 
 // ASIGNACION DE DESTINO EN GRADOS (NO MUEVE TODAVIA)
 // -----------------------------------------------------------------------
+
 void moveToAngles(float shoulder, float elbow) {
     if (movingStateXY != MovingStateXY::IDLE)
         return;
@@ -143,15 +150,11 @@ void correctErrorOnce() {
     bool needsCorrection = false;
 
     if (fabs(errorShoulder) > 0.5f) {
-<<<<<<< HEAD
         maxCorrectionJ1 = max(
             maxCorrectionJ1,
             fabs(motor1Config.motorDirection * errorShoulder / motor1Config.reduction));
 
-        float correctedShoulder =
-=======
         correctedShoulder =
->>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
             targetShoulderAngle +
             (motor1Config.motorDirection *
              errorShoulder / motor1Config.reduction);
@@ -163,15 +166,11 @@ void correctErrorOnce() {
     }
 
     if (fabs(errorElbow) > 0.5f) {
-<<<<<<< HEAD
         maxCorrectionJ2 = max(
             maxCorrectionJ2,
             fabs(motor2Config.motorDirection * errorElbow / motor2Config.reduction));
 
-        float correctedElbow =
-=======
         correctedElbow =
->>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
             targetElbowAngle +
             (motor2Config.motorDirection *
              errorElbow / motor2Config.reduction);
@@ -188,6 +187,7 @@ void correctErrorOnce() {
         targetElbowAngle = correctedElbow;
 
         movingStateXY = MovingStateXY::CORRECTING;
+
     } else {
         movingStateXY = MovingStateXY::IDLE;
     }
@@ -195,28 +195,35 @@ void correctErrorOnce() {
 
 // MAQUINA DE ESTADOS PARA MOVIMIENTO XY-PLANE (MOVIMIENTO DE MOTORES)
 // -----------------------------------------------------------------------
+
 void updateXY() {
     switch (movingStateXY) {
         case MovingStateXY::IDLE:
             break;
 
         case MovingStateXY::MOVING_TO_TARGET:
+
             motor1.run();
             motor2.run();
+
             if (motor1.distanceToGo() == 0 &&
                 motor2.distanceToGo() == 0) {
                 settleStart = millis();
                 delay(100); // estabilizacion mecanica
+
                 COMM.print("Moved to Target");
+
                 // 🔥 AQUÍ VA LO IMPORTANTE
                 currentShoulderAngle = targetShoulderAngle;
                 currentElbowAngle = targetElbowAngle;
+
                 // printDebugMove(targetShoulderAngle, targetElbowAngle);
                 movingStateXY = MovingStateXY::SETTLING;
             }
             break;
 
         case MovingStateXY::SETTLING:
+
             if (millis() - settleStart > 100) {
                 movingStateXY = MovingStateXY::CORRECTING;
                 // COMM.println("Correcting Error");
@@ -225,6 +232,7 @@ void updateXY() {
             break;
 
         case MovingStateXY::CORRECTING:
+
             motor1.run();
             motor2.run();
 
@@ -250,6 +258,7 @@ void updateXY() {
 // -----------------------------------------------------------------------
 // startT1, startT2: ángulos iniciales para el movimiento XY
 // endT1, endT2: ángulos finales para el movimiento XY
+
 void startMoveSequence(float s1, float s2, float e1, float e2) {
     startT1 = s1;
     startT2 = s2;
@@ -263,6 +272,7 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
 
 // INICIAR SECUENCIA DE ENROQUE (REY → TORRE)
 // -----------------------------------------------------------------------
+
 void startCastlingSequence(float kingS1, float kingS2,
                            float kingE1, float kingE2,
                            float rookS1, float rookS2,
@@ -289,6 +299,7 @@ void startCastlingSequence(float kingS1, float kingS2,
 
 // INICIAR SECUENCIA DE CAPTURA COMPLETA (XY → Z → HOME)
 // -----------------------------------------------------------------------
+
 bool startCaptureSequence(
     float capturedT1_,
     float capturedT2_,
@@ -342,10 +353,12 @@ bool startCaptureSequence(
 
 // MAQUINA DE ESTADOS PARA SECUENCIA DE MOVIMIENTO COMPLETA (START → XY → Z → XY → Z)
 // -----------------------------------------------------------------------
+
 void updateMoveSequence() {
     switch (moveSeqState) {
         // 1. Ir a la pieza inicial (rey o torre)
         case MoveSequenceState::MOVING_START:
+
             if (!xyIsMoving()) {
                 startZPick();
                 moveSeqState = MoveSequenceState::PICKING;
@@ -354,6 +367,7 @@ void updateMoveSequence() {
 
         // 2. Esperar a que termine la recogida
         case MoveSequenceState::PICKING:
+
             if (movingStateZ == MovingStateZ::IDLE) {
                 moveToAngles(endT1, endT2);
                 moveSeqState = MoveSequenceState::MOVING_END;
@@ -362,6 +376,7 @@ void updateMoveSequence() {
 
         // 3. Llevar la pieza a su destino
         case MoveSequenceState::MOVING_END:
+
             if (!xyIsMoving()) {
                 startZPlace();
                 moveSeqState = MoveSequenceState::PLACING;
@@ -370,6 +385,7 @@ void updateMoveSequence() {
 
         // 4. Esperar a que termine la colocación
         case MoveSequenceState::PLACING:
+
             if (movingStateZ == MovingStateZ::IDLE) {
                 if (castlingActive) {
                     // El rey ya está colocado.
@@ -393,6 +409,7 @@ void updateMoveSequence() {
 
         // 5. Esperar a llegar a la torre
         case MoveSequenceState::CASTLING_ROOK_START:
+
             if (!xyIsMoving()) {
                 startZPick();
                 moveSeqState =
@@ -402,6 +419,7 @@ void updateMoveSequence() {
 
         // 6. Esperar a recoger la torre
         case MoveSequenceState::CASTLING_ROOK_PICKING:
+
             if (movingStateZ == MovingStateZ::IDLE) {
                 moveToAngles(endT1, endT2);
                 moveSeqState =
@@ -411,6 +429,7 @@ void updateMoveSequence() {
 
         // 7. Transportar la torre a su destino
         case MoveSequenceState::CASTLING_ROOK_END:
+
             if (!xyIsMoving()) {
                 startZPlace();
                 moveSeqState =
@@ -420,6 +439,7 @@ void updateMoveSequence() {
 
         // 8. Esperar a colocar la torre
         case MoveSequenceState::CASTLING_ROOK_PLACING:
+
             if (movingStateZ == MovingStateZ::IDLE) {
                 // Ambas piezas están colocadas.
                 castlingActive = false;
@@ -431,8 +451,9 @@ void updateMoveSequence() {
             }
             break;
 
-            // 9. Esperar a terminar el regreso a HOME
+        // 9. Esperar a terminar el regreso a HOME
         case MoveSequenceState::CASTLING_WAIT_HOME:
+
             if (!xyIsMoving()) {
                 reportAndResetMaxCorrections();
 
@@ -441,8 +462,9 @@ void updateMoveSequence() {
             }
             break;
 
-            // 10. Regreso a HOME de un movimiento normal
+        // 10. Regreso a HOME de un movimiento normal
         case MoveSequenceState::GO_HOME:
+
             if (!xyIsMoving()) {
                 reportAndResetMaxCorrections();
 
@@ -468,7 +490,7 @@ void updateCaptureSequence() {
             }
             break;
 
-            // 2. Esperar pick enemigo
+        // 2. Esperar pick enemigo
         case CaptureSequenceState::PICKING_OPPONENT:
 
             if (movingStateZ == MovingStateZ::IDLE) {
@@ -543,8 +565,9 @@ void updateCaptureSequence() {
             }
             break;
 
-            // 10. Esperar a que XY termine de regresar a HOME
+        // 10. Esperar a que XY termine de regresar a HOME
         case CaptureSequenceState::WAIT_HOME:
+
             if (!xyIsMoving()) {
                 reportAndResetMaxCorrections();
 
@@ -579,12 +602,14 @@ bool resetCaptureCounter() {
 // MOVIMIENTO A HOME DEL PLANO XY
 // (NO ES HOMING SOLO REGRESAR A POSICION CERO DESPUES DEL MOVIMIENTO)
 // -----------------------------------------------------------------------
+
 void moveToHomeXY() {
     moveToAngles(0.0f, 0.0f);
 }
 
 // DEBUG
 // -----------------------------------------------------------------------
+
 void printDebugMove(float motor1Angle, float motor2Angle) {
     COMM.println();
     COMM.println("-------- MOTOR 1 --------");
