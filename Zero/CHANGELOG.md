@@ -8,8 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
-- Changelog added
+- Implemented the three-coordinate `REMOVE` command.
+- Added a complete capture sequence state machine.
+- Added automatic transfer of captured pieces to the Capture Board.
+- Added automatic pickup and placement of the attacking piece at its destination.
+- Implemented a single HOME return after the complete capture and attacking-piece movement sequence.
+- Added serial command reception diagnostics (`RX=[...]`).
 - Dedicated Z-axis game speed and acceleration parameters.
+
 
 ### Changed
 - Increased motor speeds.

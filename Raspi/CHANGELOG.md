@@ -8,7 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
-- Changelog added
+- Implemented en passant capture-square detection in `game.py`.
+- Added physical coordinate mirroring for captured and attacking squares.
+- Extended robot capture commands to transmit the captured square, attacker starting square and destination square.
+- Integrated the three-coordinate `REMOVE` command into the Raspberry Pi robot-control workflow.
 
 ### Changed
 - User button pin configuration: BUTTON_PIN = 26.
