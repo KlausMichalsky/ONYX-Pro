@@ -56,19 +56,19 @@
 #define BASE_SPEED 2 * 1500 // usada para igualar tiempo de llegada de motor1 y 2
 // BASE_SPEED: velocidad máxima que tendrá el motor que recorre la mayor distancia
 // ✔ suficientemente alta para que el movimiento no sea lento
-// ✔ suficientemente baja para que ningún motor pierda pasos
+// ✔ suficientemente baja para que ningún motor pierda pasos.
 
 // PARAMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
 <<<<<<< HEAD
 constexpr float Z_GAME_SPEED = 55000.0f;        // velocidad durante el juego min.6000 max.55000
 constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000
-=======
-constexpr float Z_GAME_SPEED = 40000.0f;        // velocidad durante el juego min.6000 max.55000 std.40000
-constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000 std.30000
+== == == =
+             constexpr float Z_GAME_SPEED = 40000.0f; // velocidad durante el juego min.6000 max.55000 std.40000
+constexpr float Z_GAME_ACCELERATION = 30000.0f;       // aceleracion durante el juego min.2000 max.30000 std.30000
 >>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
-#define Z_STEPS_DOWN 3300                       // cantidad de pasos desde el Sensor
-                                                // hasta el punto mas bajo -> posicion de agarre
+#define Z_STEPS_DOWN 3300                             // cantidad de pasos desde el Sensor
+                                                      // hasta el punto mas bajo -> posicion de agarre
 // #define Z_HOME_OFFSET 8000 / 4        // cantidad de pasos desde Sensor hast HOME -> posicion de referencia
 // #define Z_TRAVEL_POS (-Z_HOME_OFFSET) // cantidad de pasos desde HOME hasta la posición de viaje
 // para levantar la pieza (Z arriba)
@@ -286,8 +286,8 @@ inline const MotorConfig motor1Config = {
     .baseSpeed = BASE_SPEED,
 <<<<<<< HEAD
     .acceleration = 20000.0, // min.6000 max.20000
-=======
-    .acceleration = 10000.0, // min.6000 max.20000
+    == == == =
+                 .acceleration = 10000.0, // min.6000 max.20000
 >>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
     .enablePin = MOTOR1_ENABLE};
 
@@ -304,8 +304,8 @@ inline const MotorConfig motor2Config = {
     .baseSpeed = BASE_SPEED,
 <<<<<<< HEAD
     .acceleration = 20000.0, // min.6000 max.20000
-=======
-    .acceleration = 10000.0, // min.6000 max.25000
+    == == == =
+                 .acceleration = 10000.0, // min.6000 max.25000
 >>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
     .enablePin = MOTOR2_ENABLE};
 
