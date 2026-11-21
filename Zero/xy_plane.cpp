@@ -119,6 +119,7 @@ void moveToAngles(float shoulder, float elbow) {
 // ASIGNACION DEL DESTINO DEL ERROR EN GRADOS
 // (UNA SOLA EJECUCIÓN POR CICLO, NO MUEVE TODAVIA)
 // -----------------------------------------------------------------------
+
 void correctErrorOnce() {
     motorsEnableXY();
 
@@ -134,14 +135,22 @@ void correctErrorOnce() {
                        motor2Config,
                        sensor2Offset);
 
+    // Mantener los objetivos actuales como referencia inicial.
+    float correctedShoulder = targetShoulderAngle;
+    float correctedElbow = targetElbowAngle;
+
     bool needsCorrection = false;
 
     if (fabs(errorShoulder) > 0.5f) {
+<<<<<<< HEAD
         maxCorrectionJ1 = max(
             maxCorrectionJ1,
             fabs(motor1Config.motorDirection * errorShoulder / motor1Config.reduction));
 
         float correctedShoulder =
+=======
+        correctedShoulder =
+>>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
             targetShoulderAngle +
             (motor1Config.motorDirection *
              errorShoulder / motor1Config.reduction);
@@ -153,11 +162,15 @@ void correctErrorOnce() {
     }
 
     if (fabs(errorElbow) > 0.5f) {
+<<<<<<< HEAD
         maxCorrectionJ2 = max(
             maxCorrectionJ2,
             fabs(motor2Config.motorDirection * errorElbow / motor2Config.reduction));
 
         float correctedElbow =
+=======
+        correctedElbow =
+>>>>>>> 45b46657441ae6cbd08db367a57bb691757a59a4
             targetElbowAngle +
             (motor2Config.motorDirection *
              errorElbow / motor2Config.reduction);
@@ -169,6 +182,10 @@ void correctErrorOnce() {
     }
 
     if (needsCorrection) {
+        // Incorporar la corrección a las nuevas referencias.
+        targetShoulderAngle = correctedShoulder;
+        targetElbowAngle = correctedElbow;
+
         movingStateXY = MovingStateXY::CORRECTING;
     } else {
         movingStateXY = MovingStateXY::IDLE;
@@ -209,11 +226,19 @@ void updateXY() {
         case MovingStateXY::CORRECTING:
             motor1.run();
             motor2.run();
+
             if (motor1.distanceToGo() == 0 &&
                 motor2.distanceToGo() == 0) {
+                // Confirmar las nuevas referencias después
+                // de completar físicamente la corrección.
+                currentShoulderAngle = targetShoulderAngle;
+                currentElbowAngle = targetElbowAngle;
+
                 settleStart = millis();
+
                 COMM.println("Correction Done");
                 COMM.println();
+
                 movingStateXY = MovingStateXY::IDLE;
             }
             break;
