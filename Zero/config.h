@@ -60,8 +60,8 @@
 
 // PARAMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
-constexpr float Z_GAME_SPEED = 40000.0f;        // velocidad durante el juego min.6000 max.55000
-constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000
+constexpr float Z_GAME_SPEED = 40000.0f;        // velocidad durante el juego min.6000 max.55000 std.40000
+constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000 std.30000
 #define Z_STEPS_DOWN 3300                       // cantidad de pasos desde el Sensor
                                                 // hasta el punto mas bajo -> posicion de agarre
 // #define Z_HOME_OFFSET 8000 / 4        // cantidad de pasos desde Sensor hast HOME -> posicion de referencia
@@ -261,12 +261,12 @@ inline const MotorConfig motor1Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = -1, // ‼️ -1 porque el motor/sensor esta fisicamente montado al revez
     .slowSpeed = 2000.0,
-    .fastSpeed = 55000.0, // min.25000 max.55000
+    .fastSpeed = 20000.0, // min.25000 max.55000
     .steps90Deg = MOTOR1_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor1
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 20000.0, // min.6000 max.15000
+    .acceleration = 10000.0, // min.6000 max.20000
     .enablePin = MOTOR1_ENABLE};
 
 inline const MotorConfig motor2Config = {
@@ -275,12 +275,12 @@ inline const MotorConfig motor2Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = 1,
     .slowSpeed = 1000.0,
-    .fastSpeed = 55000.0, // min.20000 max.55000
+    .fastSpeed = 20000.0, // min.20000 max.55000
     .steps90Deg = MOTOR2_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor2
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 25000.0, // min.6000 max.25000
+    .acceleration = 10000.0, // min.6000 max.25000
     .enablePin = MOTOR2_ENABLE};
 
 inline const MotorConfig motor3Config = {
