@@ -44,6 +44,7 @@ void coreUpdate() {
         coreHomeSingleMotor();
         return;
     }
+    // RECUPERACIÓN AUTOMÁTICA DE POSICIÓN XY
 
     updateXY();
     updateZ();

@@ -26,6 +26,29 @@ static float targetShoulderAngle = 0;
 static float targetElbowAngle = 0;
 static unsigned long settleStart = 0;
 
+// REGISTRO DE CORRECCIÓN ANGULAR MÁXIMA POR JUGADA
+// -----------------------------------------------------------------------
+static float maxCorrectionJ1 = 0.0f;
+static float maxCorrectionJ2 = 0.0f;
+
+// =======================================================================
+// INFORME DE CORRECCIONES ANGULARES POR JUGADA
+// =======================================================================
+static void reportAndResetMaxCorrections() {
+    COMM.println("XY CORRECTION REPORT");
+
+    COMM.print("J1 MAX: ");
+    COMM.print(maxCorrectionJ1, 2);
+    COMM.println(" degrees");
+
+    COMM.print("J2 MAX: ");
+    COMM.print(maxCorrectionJ2, 2);
+    COMM.println(" degrees");
+
+    maxCorrectionJ1 = 0.0f;
+    maxCorrectionJ2 = 0.0f;
+}
+
 // DEFINICION DE MAQUINA DE ESTADOS PARA MOVIMIENTO XY-PLANE
 // -----------------------------------------------------------------------
 MovingStateXY movingStateXY = MovingStateXY::IDLE;
@@ -114,6 +137,10 @@ void correctErrorOnce() {
     bool needsCorrection = false;
 
     if (fabs(errorShoulder) > 0.5f) {
+        maxCorrectionJ1 = max(
+            maxCorrectionJ1,
+            fabs(motor1Config.motorDirection * errorShoulder / motor1Config.reduction));
+
         float correctedShoulder =
             targetShoulderAngle +
             (motor1Config.motorDirection *
@@ -126,6 +153,10 @@ void correctErrorOnce() {
     }
 
     if (fabs(errorElbow) > 0.5f) {
+        maxCorrectionJ2 = max(
+            maxCorrectionJ2,
+            fabs(motor2Config.motorDirection * errorElbow / motor2Config.reduction));
+
         float correctedElbow =
             targetElbowAngle +
             (motor2Config.motorDirection *
@@ -374,9 +405,11 @@ void updateMoveSequence() {
             }
             break;
 
-        // 9. Esperar a terminar el regreso a HOME
+            // 9. Esperar a terminar el regreso a HOME
         case MoveSequenceState::CASTLING_WAIT_HOME:
             if (!xyIsMoving()) {
+                reportAndResetMaxCorrections();
+
                 COMM.println("MOVE DONE");
                 moveSeqState = MoveSequenceState::IDLE;
             }
@@ -385,6 +418,8 @@ void updateMoveSequence() {
             // 10. Regreso a HOME de un movimiento normal
         case MoveSequenceState::GO_HOME:
             if (!xyIsMoving()) {
+                reportAndResetMaxCorrections();
+
                 COMM.println("MOVE DONE");
                 moveSeqState = MoveSequenceState::IDLE;
             }
@@ -482,10 +517,11 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 10. Esperar a que XY termine de regresar a HOME
+            // 10. Esperar a que XY termine de regresar a HOME
         case CaptureSequenceState::WAIT_HOME:
-
             if (!xyIsMoving()) {
+                reportAndResetMaxCorrections();
+
                 COMM.println("CAPTURE DONE");
                 captureSeqState = CaptureSequenceState::IDLE;
             }

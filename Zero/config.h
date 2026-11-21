@@ -60,7 +60,7 @@
 
 // PARAMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
-constexpr float Z_GAME_SPEED = 40000.0f;        // velocidad durante el juego min.6000 max.55000
+constexpr float Z_GAME_SPEED = 55000.0f;        // velocidad durante el juego min.6000 max.55000
 constexpr float Z_GAME_ACCELERATION = 30000.0f; // aceleracion durante el juego min.2000 max.30000
 #define Z_STEPS_DOWN 3300                       // cantidad de pasos desde el Sensor
                                                 // hasta el punto mas bajo -> posicion de agarre
@@ -230,6 +230,19 @@ enum class CaptureSequenceState {
     WAIT_HOME
 };
 
+// =======================================================================
+// MÁQUINA DE ESTADOS PARA RECUPERACIÓN AUTOMÁTICA XY
+// =======================================================================
+enum class AutoRecoveryState {
+    IDLE,
+    START_J1,
+    WAIT_J1,
+    START_J2,
+    WAIT_J2,
+    DONE,
+    ERROR
+};
+
 // ESTRUCTURAS DE CONFIGURACIÓN DE MOTORES
 // -----------------------------------------------------------------------
 struct MotorConfig {
@@ -266,7 +279,7 @@ inline const MotorConfig motor1Config = {
     .stepsLimit = 0, // no existe para motor1
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 20000.0, // min.6000 max.15000
+    .acceleration = 20000.0, // min.6000 max.20000
     .enablePin = MOTOR1_ENABLE};
 
 inline const MotorConfig motor2Config = {
@@ -280,7 +293,7 @@ inline const MotorConfig motor2Config = {
     .stepsLimit = 0, // no existe para motor2
     .timeout = 15000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 25000.0, // min.6000 max.25000
+    .acceleration = 20000.0, // min.6000 max.20000
     .enablePin = MOTOR2_ENABLE};
 
 inline const MotorConfig motor3Config = {
