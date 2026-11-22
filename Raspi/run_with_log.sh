@@ -23,4 +23,4 @@ LOG_FILE="$LOG_DIR/ONYX-Pro_Log_$(date +%Y-%m-%d_%H-%M-%S).txt"
 echo "Registro guardado en: $LOG_FILE"
 
 # Ejecutar ONYX-Pro y guardar toda la salida
-python -u -b main.py 2>&1 | tee "$LOG_FILE"
+python -u -b main.py "$@" 2>&1 | tee "$LOG_FILE"

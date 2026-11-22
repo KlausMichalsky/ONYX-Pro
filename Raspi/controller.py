@@ -25,16 +25,19 @@ from game import (
     is_game_over,
 )
 
+from maintenance import MaintenanceConsole
 
 # =========================
 # TURNO HUMANO
 # =========================
+
 
 def run_human_turn(
     board,
     confirmed_state,
     change_history,
     mirror_coordinates,
+    maintenance_callback=None,
 ):
     """Gestiona el turno humano y devuelve el estado confirmado."""
 
@@ -47,6 +50,7 @@ def run_human_turn(
         current_state = sensors.wait_for_human_confirmation(
             confirmed_state,
             change_history,
+            maintenance_callback=maintenance_callback,
         )
 
         # Si el tablero volvió a la posición confirmada.
@@ -144,16 +148,18 @@ def run_robot_turn(board, mirror_coordinates, change_history):
 # =========================
 # BUCLE PRINCIPAL DE PARTIDA
 # =========================
-
 def run_game_loop(
     board,
     human_turn,
     mirror_coordinates,
     confirmed_state,
     change_history,
+    maintenance_mode=False,
 ):
     """Coordina los turnos hasta que termina la partida."""
-
+    maintenance_console = (
+        MaintenanceConsole() if maintenance_mode else None
+    )
     while True:
 
         if human_turn:
@@ -162,6 +168,9 @@ def run_game_loop(
                 confirmed_state,
                 change_history,
                 mirror_coordinates,
+                maintenance_callback=(
+                    maintenance_console.poll if maintenance_console else None
+                ),
             )
 
             human_turn = False

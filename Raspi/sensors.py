@@ -565,12 +565,19 @@ def wait_for_expected_state(expected_state, current_state):
 # ============================================================
 # ESPERAR CONFIRMACIÓN DE JUGADA HUMANA
 # ============================================================
-
-def wait_for_human_confirmation(confirmed_state, change_history):
+def wait_for_human_confirmation(
+    confirmed_state,
+    change_history,
+    maintenance_callback=None,
+):
     """Espera el botón y devuelve el estado del tablero al confirmar."""
 
     while True:
         check_shutdown_request()
+
+        if maintenance_callback is not None:
+            maintenance_callback()
+
         change_history.extend(detect_changes())
 
         if button_pressed():
@@ -578,9 +585,9 @@ def wait_for_human_confirmation(confirmed_state, change_history):
 
             # Leer los últimos cambios antes de confirmar.
             change_history.extend(detect_changes())
+
             current_state = board_state.copy()
 
-            # Si el tablero volvió a su posición original.
             if current_state == confirmed_state:
                 change_history.clear()
                 return None

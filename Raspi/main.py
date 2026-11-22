@@ -13,6 +13,7 @@
 
 import signal
 import subprocess
+import sys
 
 import sensors
 
@@ -91,10 +92,14 @@ def poweroff_system():
     raise SystemExit(0)
 
 
+MAINTENANCE_MODE = "--maintenance" in sys.argv
+
+if MAINTENANCE_MODE:
+    print("🔧 ONYX-Pro: MODO MANTENIMIENTO")
+
 # =========================
 # INICIALIZACIÓN GENERAL
 # =========================
-
 initialize_serial()
 initialize_stockfish()
 sensors.init_button()
@@ -155,6 +160,7 @@ try:
             mirror_coordinates,
             confirmed_state,
             change_history,
+            maintenance_mode=MAINTENANCE_MODE,
         )
 
         # -----------------------------------------
