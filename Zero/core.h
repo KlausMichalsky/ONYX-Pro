@@ -25,3 +25,7 @@ void coreInit();
 void coreHomeAll();
 void coreHomeSingleMotor();
 void coreUpdate();
+
+bool coreStartAutoRecovery();
+AutoRecoveryState coreGetAutoRecoveryState();
+void coreResetAutoRecovery();

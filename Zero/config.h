@@ -144,6 +144,8 @@ enum class Command {
     CAPTURETEST,
     CAPTURERESET,
     MOTOROFF,
+    XYOFF,
+    XYON,
     UNKNOWN
 };
 

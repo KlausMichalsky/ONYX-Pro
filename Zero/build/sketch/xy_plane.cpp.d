@@ -135,8 +135,10 @@ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\xy_plane.cpp.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Bootsel.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\config.h \
- C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\core.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\homing.h \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src/AccelStepper.h \
+ C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\motors.h \
  C:\Users\Klaus\Documents\ONYX-Pro\Zero\build\sketch\sensors.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\libraries\Wire\src/Wire.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/api/HardwareI2C.h \

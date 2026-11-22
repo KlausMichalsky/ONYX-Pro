@@ -24,16 +24,117 @@
 float currentShoulderAngle = 0.0f;
 float currentElbowAngle = 0.0f;
 
+static AutoRecoveryState autoRecoveryState = AutoRecoveryState::IDLE;
+
 // INICIALIZACIÓN DEL CORE
 // -----------------------------------------------------------------------
 void coreInit() {
     homeAllState = HomeAllState::IDLE;
     homeSingleState = HomeSingleState::IDLE;
+    autoRecoveryState = AutoRecoveryState::IDLE;
+}
+
+static void updateAutoRecovery() {
+    switch (autoRecoveryState) {
+        case AutoRecoveryState::START_J1:
+
+            COMM.println("XY AUTO RECOVERY: HOMING J1");
+
+            homingInitXY(motor1Homing);
+
+            homingStartXY(
+                motor1,
+                motor1Config,
+                motor1Homing,
+                HALL_1);
+
+            autoRecoveryState = AutoRecoveryState::WAIT_J1;
+            break;
+
+        case AutoRecoveryState::WAIT_J1:
+
+            homingStepXY(
+                motor1,
+                motor1Config,
+                motor1Homing,
+                HALL_1);
+
+            if (motor1Homing.state == HomingStateXY::OK) {
+                COMM.println("J1 HOMING OK");
+
+                homingInitXY(motor1Homing);
+
+                autoRecoveryState = AutoRecoveryState::START_J2;
+
+            } else if (motor1Homing.state == HomingStateXY::ERROR) {
+                COMM.println("ERROR: AUTO RECOVERY J1 FAILED");
+
+                motor1.stop();
+                motor2.stop();
+                motorsDisableXY();
+
+                autoRecoveryState = AutoRecoveryState::ERROR;
+            }
+
+            break;
+
+        case AutoRecoveryState::START_J2:
+
+            COMM.println("XY AUTO RECOVERY: HOMING J2");
+
+            homingInitXY(motor2Homing);
+
+            homingStartXY(
+                motor2,
+                motor2Config,
+                motor2Homing,
+                HALL_2);
+
+            autoRecoveryState = AutoRecoveryState::WAIT_J2;
+            break;
+
+        case AutoRecoveryState::WAIT_J2:
+
+            homingStepXY(
+                motor2,
+                motor2Config,
+                motor2Homing,
+                HALL_2);
+
+            if (motor2Homing.state == HomingStateXY::OK) {
+                COMM.println("J2 HOMING OK");
+
+                homingInitXY(motor2Homing);
+
+                // Sincronizar únicamente las referencias articulares XY.
+                currentShoulderAngle = 0.0f;
+                currentElbowAngle = 0.0f;
+
+                COMM.println("XY AUTO RECOVERY DONE");
+
+                autoRecoveryState = AutoRecoveryState::DONE;
+
+            } else if (motor2Homing.state == HomingStateXY::ERROR) {
+                COMM.println("ERROR: AUTO RECOVERY J2 FAILED");
+
+                motor1.stop();
+                motor2.stop();
+                motorsDisableXY();
+
+                autoRecoveryState = AutoRecoveryState::ERROR;
+            }
+
+            break;
+
+        case AutoRecoveryState::IDLE:
+        case AutoRecoveryState::DONE:
+        case AutoRecoveryState::ERROR:
+            break;
+    }
 }
 
 // CONTROL DE TAREAS EN EL FLUJO
 // -----------------------------------------------------------------------
-
 void coreUpdate() {
     if (homeAllState != HomeAllState::IDLE) {
         coreHomeAll();
@@ -44,7 +145,14 @@ void coreUpdate() {
         coreHomeSingleMotor();
         return;
     }
-    // RECUPERACIÓN AUTOMÁTICA DE POSICIÓN XY
+    // RECUPERACIÓN AUTOMÁTICA XY
+    if (autoRecoveryState == AutoRecoveryState::START_J1 ||
+        autoRecoveryState == AutoRecoveryState::WAIT_J1 ||
+        autoRecoveryState == AutoRecoveryState::START_J2 ||
+        autoRecoveryState == AutoRecoveryState::WAIT_J2) {
+        updateAutoRecovery();
+        return;
+    }
 
     updateXY();
     updateZ();
@@ -156,4 +264,21 @@ void coreHomeAll() {
         default:
             break;
     }
+}
+
+bool coreStartAutoRecovery() {
+    if (autoRecoveryState != AutoRecoveryState::IDLE) {
+        return false;
+    }
+
+    autoRecoveryState = AutoRecoveryState::START_J1;
+    return true;
+}
+
+AutoRecoveryState coreGetAutoRecoveryState() {
+    return autoRecoveryState;
+}
+
+void coreResetAutoRecovery() {
+    autoRecoveryState = AutoRecoveryState::IDLE;
 }

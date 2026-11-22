@@ -16,30 +16,31 @@
 #include <Arduino.h>
 
 #include "config.h"
+#include "core.h"
 #include "motors.h"
 #include "sensors.h"
 #include "utils.h"
 #include "xy_plane.h"
 #include "z_axis.h"
 
-// VARIABLES LOCALES
+// VARIABLES LOCALES (para poder usarlas abajo)
 // -----------------------------------------------------------------------
-
 static float targetShoulderAngle = 0;
 static float targetElbowAngle = 0;
 static unsigned long settleStart = 0;
+static void resetSequenceTracking();
 
 // REGISTRO DE CORRECCIÓN ANGULAR MÁXIMA POR JUGADA
 // -----------------------------------------------------------------------
-
 static float maxCorrectionJ1 = 0.0f;
 static float maxCorrectionJ2 = 0.0f;
+static bool completionReportPrinted = false;
+static bool recoveryPending = false;
 
 // =======================================================================
 // INFORME DE CORRECCIONES ANGULARES POR JUGADA
 // =======================================================================
-
-static void reportAndResetMaxCorrections() {
+static void reportMaxCorrections() {
     COMM.println("XY CORRECTION REPORT");
 
     COMM.print("J1 MAX: ");
@@ -49,9 +50,85 @@ static void reportAndResetMaxCorrections() {
     COMM.print("J2 MAX: ");
     COMM.print(maxCorrectionJ2, 2);
     COMM.println(" degrees");
+}
 
+static void resetMaxCorrections() {
     maxCorrectionJ1 = 0.0f;
     maxCorrectionJ2 = 0.0f;
+}
+
+static bool finishXYSequence(const char *doneMessage) {
+    // Informar los máximos una sola vez.
+    if (!completionReportPrinted) {
+        reportMaxCorrections();
+        completionReportPrinted = true;
+
+        // Comprobar el umbral de recuperación.
+        if (maxCorrectionJ1 > 2.00f ||
+            maxCorrectionJ2 > 2.00f) {
+            COMM.println("XY DEVIATION LIMIT EXCEEDED");
+
+            if (coreStartAutoRecovery()) {
+                recoveryPending = true;
+                COMM.println("XY AUTO RECOVERY START");
+
+                return false;
+
+            } else {
+                COMM.println("ERROR: CANNOT START XY RECOVERY");
+
+                completionReportPrinted = false;
+                return true;
+            }
+        }
+    }
+
+    // Esperar el resultado de la recuperación.
+    if (recoveryPending) {
+        AutoRecoveryState state = coreGetAutoRecoveryState();
+
+        if (state == AutoRecoveryState::DONE) {
+            COMM.println("XY RECOVERY SUCCESS");
+
+            // La recuperación terminó correctamente.
+            coreResetAutoRecovery();
+
+            recoveryPending = false;
+            completionReportPrinted = false;
+
+            // Limpiar máximos para la siguiente jugada.
+            resetMaxCorrections();
+
+            COMM.println(doneMessage);
+
+            return true;
+        }
+
+        if (state == AutoRecoveryState::ERROR) {
+            COMM.println("ERROR: XY RECOVERY FAILED");
+            COMM.println("MOVE NOT CONFIRMED");
+
+            // Consumir el resultado, pero conservar los máximos
+            // para poder diagnosticar el fallo.
+            coreResetAutoRecovery();
+
+            recoveryPending = false;
+            completionReportPrinted = false;
+
+            return true;
+        }
+
+        // El homing todavía está trabajando.
+        return false;
+    }
+
+    // No fue necesaria la recuperación.
+    resetMaxCorrections();
+    completionReportPrinted = false;
+
+    COMM.println(doneMessage);
+
+    return true;
 }
 
 // DEFINICION DE MAQUINA DE ESTADOS PARA MOVIMIENTO XY-PLANE
@@ -264,6 +341,7 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
     startT2 = s2;
     endT1 = e1;
     endT2 = e2;
+    resetSequenceTracking();
 
     moveSeqState = MoveSequenceState::MOVING_START;
 
@@ -277,6 +355,7 @@ void startCastlingSequence(float kingS1, float kingS2,
                            float kingE1, float kingE2,
                            float rookS1, float rookS2,
                            float rookE1, float rookE2) {
+    resetSequenceTracking();
     // Guardar las coordenadas del rey
     startT1 = kingS1;
     startT2 = kingS2;
@@ -340,6 +419,8 @@ bool startCaptureSequence(
 
     attackerEndT1 = attackerEndT1_;
     attackerEndT2 = attackerEndT2_;
+
+    resetSequenceTracking();
 
     // Iniciar la captura retirando la pieza enemiga.
     captureSeqState = CaptureSequenceState::CAPTURE_START;
@@ -451,26 +532,26 @@ void updateMoveSequence() {
             }
             break;
 
-        // 9. Esperar a terminar el regreso a HOME
+            // 9. Esperar a terminar el regreso a HOME
         case MoveSequenceState::CASTLING_WAIT_HOME:
 
             if (!xyIsMoving()) {
-                reportAndResetMaxCorrections();
-
-                COMM.println("MOVE DONE");
-                moveSeqState = MoveSequenceState::IDLE;
+                if (finishXYSequence("MOVE DONE")) {
+                    moveSeqState = MoveSequenceState::IDLE;
+                }
             }
+
             break;
 
-        // 10. Regreso a HOME de un movimiento normal
+            // 10. Regreso a HOME de un movimiento normal
         case MoveSequenceState::GO_HOME:
 
             if (!xyIsMoving()) {
-                reportAndResetMaxCorrections();
-
-                COMM.println("MOVE DONE");
-                moveSeqState = MoveSequenceState::IDLE;
+                if (finishXYSequence("MOVE DONE")) {
+                    moveSeqState = MoveSequenceState::IDLE;
+                }
             }
+
             break;
 
         case MoveSequenceState::IDLE:
@@ -565,15 +646,15 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 10. Esperar a que XY termine de regresar a HOME
+            // 10. Esperar a que XY termine de regresar a HOME
         case CaptureSequenceState::WAIT_HOME:
 
             if (!xyIsMoving()) {
-                reportAndResetMaxCorrections();
-
-                COMM.println("CAPTURE DONE");
-                captureSeqState = CaptureSequenceState::IDLE;
+                if (finishXYSequence("CAPTURE DONE")) {
+                    captureSeqState = CaptureSequenceState::IDLE;
+                }
             }
+
             break;
 
         case CaptureSequenceState::IDLE:
@@ -735,4 +816,12 @@ void cancelMoveSequence() {
     movingStateXY = MovingStateXY::IDLE;
 
     COMM.println("MOVE SEQUENCE CANCELED");
+}
+
+// Limpiar las variables de autorecovery al comenzar una nueva secuencia
+static void resetSequenceTracking() {
+    resetMaxCorrections();
+
+    completionReportPrinted = false;
+    recoveryPending = false;
 }

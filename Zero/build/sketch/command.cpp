@@ -117,6 +117,10 @@ Command parseCommand(const String &cmd) {
         return Command::CAPTURERESET;
     else if (cmd == "MOTOROFF")
         return Command::MOTOROFF;
+    else if (cmd == "XYOFF")
+        return Command::XYOFF;
+    else if (cmd == "XYON")
+        return Command::XYON;
     else
         return Command::UNKNOWN;
 }
@@ -398,6 +402,16 @@ void processCommand(const String &cmdStr) {
             motorsDisableXY();
             motorDisableZ();
             COMM.println("MOTORS OFF");
+            break;
+
+        case Command::XYOFF:
+            motorsDisableXY();
+            COMM.println("XY MOTORS OFF");
+            break;
+
+        case Command::XYON:
+            motorsEnableXY();
+            COMM.println("XY MOTORS ON");
             break;
 
         default: {
