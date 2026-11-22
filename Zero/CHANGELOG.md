@@ -1,4 +1,3 @@
-
 # Firmware Changelog
 
 All notable changes to the ONYX-Pro RP2040 firmware are documented in this file.
@@ -14,8 +13,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added automatic pickup and placement of the attacking piece at its destination.
 - Implemented a single HOME return after the complete capture and attacking-piece movement sequence.
 - Added serial command reception diagnostics (`RX=[...]`).
-- Dedicated Z-axis game speed and acceleration parameters.
-
+- Added dedicated Z-axis game speed and acceleration parameters.
+- Implemented automatic XY position recovery when joint deviation exceeds 2.00 degrees.
+- Added sequential XY recovery homing, starting with J1 (shoulder) followed by J2 (elbow).
+- Added automatic XY position reference synchronization after successful recovery.
+- Added XY recovery status reporting through the serial interface.
+- Added maximum angular deviation reporting for J1 and J2.
 
 ### Changed
 - Increased motor speeds.
@@ -41,4 +44,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Stepper motor control and homing.
 - Robot movement and positioning commands.
 - Serial communication with Raspberry Pi.
-
