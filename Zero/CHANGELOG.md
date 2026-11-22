@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
+### Security
+---
+
+## [1.1.0] - 2026-11-22
+
+### Added
 - Implemented the three-coordinate `REMOVE` command.
 - Added a complete capture sequence state machine.
 - Added automatic transfer of captured pieces to the Capture Board.
@@ -25,15 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Adjusted motor acceleration values.
 - Updated Z-axis mechanical reduction configuration to 2:1 (reference only).
 
-### Fixed
-- 
-
-### Removed
-- 
-
 ### Security
-- 
-
 ---
 
 ## [1.0.0] - 2026-11-15

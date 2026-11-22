@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
+### Security
+---
+
+## [1.1.0] - 2026-11-22
+
+### Added
 - Implemented en passant capture-square detection in `game.py`.
 - Added physical coordinate mirroring for captured and attacking squares.
 - Extended robot capture commands to transmit the captured square, attacker starting square and destination square.
@@ -26,12 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Starting a new game after ending the previous game with a 1-second button press.
 - Shutting down the Raspberry Pi after ending a game with a button press longer than 5 seconds.
 
-### Removed
-- 
-
 ### Security
-- 
-
 ---
 
 ## [1.0.0] - 2026-11-15
