@@ -69,9 +69,13 @@
 
 // PARÁMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
-
-constexpr float Z_GAME_SPEED = 55000.0f;        // Velocidad durante el juego min.6000 max.55000
-constexpr float Z_GAME_ACCELERATION = 30000.0f; // Aceleración durante el juego min.2000 max.30000
+constexpr float Z_GAME_SPEED = 55000.0f;         // Velocidad durante el juego min.6000 max.55000
+constexpr float Z_GAME_ACCELERATION = 100000.0f; // Aceleración durante el juego min.2000 max.100000
+// Aceleración	Velocidad máxima teórica
+// 80.000	    5.130 pasos/s
+// 100.000	    5.745 pasos/s
+// 150.000	    7.036 pasos/s
+// 200.000	    8.124 pasos/s
 
 #define Z_STEPS_DOWN 3300 // Cantidad de pasos desde el sensor
                           // hasta el punto más bajo -> posición de agarre
