@@ -182,7 +182,7 @@ try:
 
 except sensors.ShutdownRequested:
 
-    print("\n🛑 Apagado solicitado mediante el botón GPIO26.")
+    print("\n🛑 Apagado solicitado mediante el botón GPIO17.")
 
     shutdown()
     poweroff_system()
