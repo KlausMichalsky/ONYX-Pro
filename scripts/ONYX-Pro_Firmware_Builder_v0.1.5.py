@@ -16,7 +16,7 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-APP_VERSION = "v0.1.3"
+APP_VERSION = "v0.1.5"
 FQBN = "rp2040:rp2040:waveshare_rp2040_zero"
 BOARD_OPTIONS = (
     "flash=2097152_0,freq=200,exceptions=Disabled,"
@@ -26,23 +26,41 @@ SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
 
 
 def find_cli():
+    """Find Arduino CLI on Windows and macOS/Linux."""
     found = shutil.which("arduino-cli") or shutil.which("arduino-cli.exe")
     if found:
         return found
-    roots = [os.environ.get("LOCALAPPDATA"), os.environ.get("ProgramFiles"),
-             os.environ.get("ProgramFiles(x86)")]
-    suffixes = [
-        "Programs/Arduino IDE/resources/app/lib/backend/resources/arduino-cli.exe",
-        "Programs/Arduino IDE/resources/app/lib/backend/arduino-cli.exe",
-        "Arduino IDE/resources/app/lib/backend/resources/arduino-cli.exe",
-        "Arduino IDE/resources/app/lib/backend/arduino-cli.exe",
-    ]
-    for root in filter(None, roots):
-        for suffix in suffixes:
-            candidate = Path(root) / suffix
-            if candidate.is_file():
+
+    if os.name == "nt":
+        roots = [
+            os.environ.get("LOCALAPPDATA"),
+            os.environ.get("ProgramFiles"),
+            os.environ.get("ProgramFiles(x86)"),
+        ]
+        suffixes = [
+            "Programs/Arduino IDE/resources/app/lib/backend/resources/arduino-cli.exe",
+            "Programs/Arduino IDE/resources/app/lib/backend/arduino-cli.exe",
+            "Arduino IDE/resources/app/lib/backend/resources/arduino-cli.exe",
+            "Arduino IDE/resources/app/lib/backend/arduino-cli.exe",
+        ]
+        for root in filter(None, roots):
+            for suffix in suffixes:
+                candidate = Path(root) / suffix
+                if candidate.is_file():
+                    return str(candidate)
+    else:
+        candidates = [
+            Path("/opt/homebrew/bin/arduino-cli"),
+            Path("/usr/local/bin/arduino-cli"),
+            Path("/usr/bin/arduino-cli"),
+            Path.home() / ".local/bin/arduino-cli",
+        ]
+        for candidate in candidates:
+            if candidate.is_file() and os.access(candidate, os.X_OK):
                 return str(candidate)
+
     return ""
+
 
 
 class App:
@@ -81,12 +99,13 @@ class App:
         accent_active = "#1474ce"
         border = "#3a404b"
 
-        style.configure(".", background=bg, foreground=fg, font=("Segoe UI", 9))
+        ui_font = "Segoe UI" if os.name == "nt" else "Helvetica"
+        style.configure(".", background=bg, foreground=fg, font=(ui_font, 9))
         style.configure("TFrame", background=bg)
         style.configure("TLabel", background=bg, foreground=fg)
         style.configure("TLabelframe", background=bg, foreground=fg, bordercolor=border)
         style.configure("TLabelframe.Label", background=bg, foreground="#75baff",
-                        font=("Segoe UI", 9, "bold"))
+                        font=(ui_font, 9, "bold"))
         style.configure("TEntry", fieldbackground=panel_alt, foreground=fg,
                         insertcolor=fg, bordercolor=border, lightcolor=border,
                         darkcolor=border, padding=6)
@@ -104,7 +123,7 @@ class App:
 
         outer = ttk.Frame(self.root, padding=15)
         outer.pack(fill="both", expand=True)
-        ttk.Label(outer, text="ONYX-Pro", font=("Segoe UI", 20, "bold"),
+        ttk.Label(outer, text="ONYX-Pro", font=(ui_font, 20, "bold"),
                   foreground="#75baff").pack(anchor="w")
         ttk.Label(outer, text="Firmware Builder | Waveshare RP2040 Zero | Arduino-Pico").pack(anchor="w", pady=(0, 12))
 
@@ -153,7 +172,7 @@ class App:
         ]
         for i, (k, v) in enumerate(vals):
             ttk.Label(board, text=f"{k}:").grid(row=i // 2, column=(i % 2) * 2, sticky="w", padx=(0, 5), pady=2)
-            ttk.Label(board, text=v, font=("Segoe UI", 9, "bold")).grid(row=i // 2, column=(i % 2) * 2 + 1, sticky="w", padx=(0, 18), pady=2)
+            ttk.Label(board, text=v, font=(ui_font, 9, "bold")).grid(row=i // 2, column=(i % 2) * 2 + 1, sticky="w", padx=(0, 18), pady=2)
 
         actions = ttk.Frame(outer)
         actions.pack(fill="x", pady=(0, 8))
@@ -188,8 +207,10 @@ class App:
             self.output.set(p)
 
     def pick_cli(self):
-        p = filedialog.askopenfilename(title="Seleccionar arduino-cli.exe",
-                                       filetypes=[("Arduino CLI", "arduino-cli.exe"), ("Todos", "*.*")])
+        p = filedialog.askopenfilename(
+            title="Seleccionar Arduino CLI",
+            filetypes=[("Arduino CLI", "arduino-cli*"), ("Todos", "*.*")],
+        )
         if p:
             self.cli.set(p)
 
@@ -251,7 +272,7 @@ class App:
         output.mkdir(parents=True, exist_ok=True)
         base = f"ONYX-Pro_Firmware_v{version}"
         # Only the ZIP package and its checksum are published as output files.
-        targets = [output / f"{base}.zip", output / f"{base}.zip.sha256"]
+        targets = [output / f"{base}.zip", output / f"{base}.zip.sha256.txt"]
         existing = [p.name for p in targets if p.exists()]
         if existing and not messagebox.askyesno("ONYX-Pro", "Ya existen estos archivos:\n\n" + "\n".join(existing) + "\n\n¿Reemplazarlos?"):
             return
@@ -283,7 +304,7 @@ class App:
                 cmd = [cli, "compile", "--fqbn", FQBN, "--board-options", BOARD_OPTIONS,
                        "--clean", "--output-dir", str(build), str(sketch)]
                 self.log_line("\n[1/4] Compilando con Arduino CLI…")
-                self.log_line(subprocess.list2cmdline(cmd))
+                self.log_line(shlex.join(cmd))
                 proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                         text=True, encoding="utf-8", errors="replace", bufsize=1)
                 assert proc.stdout is not None
@@ -305,7 +326,7 @@ class App:
 
                 archive_uf2_name = f"{base}.uf2"
                 archive = output / f"{base}.zip"
-                checksum = output / f"{base}.zip.sha256"
+                checksum = output / f"{base}.zip.sha256.txt"
                 self.log_line("\n[2/4] UF2 compilado (se incluirá únicamente dentro del ZIP):")
                 self.log_line(f"{archive_uf2_name} ({source.stat().st_size:,} bytes)")
 
@@ -342,7 +363,7 @@ class App:
                 self.log_line(str(checksum))
                 self.status_line(f"Release v{version} creado correctamente.")
                 self.root.after(0, lambda: messagebox.showinfo(
-                    "ONYX-Pro", f"¡Firmware compilado y empaquetado!\n\n{base}.zip\n{base}.zip.sha256"
+                    "ONYX-Pro", f"¡Firmware compilado y empaquetado!\n\n{base}.zip\n{base}.zip.sha256.txt"
                     + ("\nINSTALLATION_GUIDE.txt incluido en el ZIP" if guide is not None else "\nGuía de instalación no incluida")
                     + f"\n\n{output}"
                 ))
