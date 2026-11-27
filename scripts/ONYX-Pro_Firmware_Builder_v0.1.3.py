@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""ONYX-Pro Firmware Builder: compile RP2040 UF2, ZIP it, and create SHA-256."""
+"""ONYX-Pro Firmware Builder: compile RP2040 UF2 into a ZIP and create SHA-256."""
 
 from __future__ import annotations
 import hashlib
@@ -16,7 +16,7 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-APP_VERSION = "v0.1.1"
+APP_VERSION = "v0.1.3"
 FQBN = "rp2040:rp2040:waveshare_rp2040_zero"
 BOARD_OPTIONS = (
     "flash=2097152_0,freq=200,exceptions=Disabled,"
@@ -55,6 +55,10 @@ class App:
         self.output = tk.StringVar()
         self.version = tk.StringVar(value="1.1.0")
         self.cli = tk.StringVar(value=find_cli())
+        self.installation_guide = tk.StringVar(
+            value=str(Path(__file__).resolve().with_name("INSTALLATION_GUIDE.txt"))
+        )
+        self.include_installation_guide = tk.BooleanVar(value=True)
         self.status = tk.StringVar(value="Listo. Seleccioná el firmware y la carpeta de salida.")
         self.building = False
         self.ui()
@@ -120,6 +124,22 @@ class App:
         ttk.Entry(box, textvariable=self.version, width=18).grid(row=3, column=1, sticky="w", padx=8)
         ttk.Label(box, text="SemVer: MAJOR.MINOR.PATCH").grid(row=3, column=1, sticky="e", padx=8)
 
+        guide_box = ttk.LabelFrame(outer, text="Documentación de instalación", padding=10)
+        guide_box.pack(fill="x", pady=(10, 0))
+        guide_box.columnconfigure(1, weight=1)
+        ttk.Checkbutton(
+            guide_box,
+            text="Incluir INSTALLATION_GUIDE.txt dentro del ZIP",
+            variable=self.include_installation_guide,
+        ).grid(row=0, column=0, columnspan=3, sticky="w", pady=(0, 6))
+        ttk.Label(guide_box, text="Archivo:").grid(row=1, column=0, sticky="w")
+        ttk.Entry(guide_box, textvariable=self.installation_guide).grid(
+            row=1, column=1, sticky="ew", padx=8
+        )
+        ttk.Button(guide_box, text="Examinar…", command=self.pick_installation_guide).grid(
+            row=1, column=2
+        )
+
         board = ttk.LabelFrame(outer, text="Perfil de compilación (bloqueado)", padding=10)
         board.pack(fill="x", pady=10)
         vals = [
@@ -173,6 +193,14 @@ class App:
         if p:
             self.cli.set(p)
 
+    def pick_installation_guide(self):
+        p = filedialog.askopenfilename(
+            title="Seleccionar INSTALLATION_GUIDE.txt",
+            filetypes=[("Archivo de texto", "*.txt"), ("Todos", "*.*")],
+        )
+        if p:
+            self.installation_guide.set(p)
+
     def log_line(self, text):
         def add():
             self.log.configure(state="normal")
@@ -195,6 +223,8 @@ class App:
         output = Path(self.output.get().strip()).expanduser()
         version = self.version.get().strip()
         cli = self.cli.get().strip() or find_cli()
+        include_guide = self.include_installation_guide.get()
+        guide = Path(self.installation_guide.get().strip()).expanduser() if self.installation_guide.get().strip() else None
         if not sketch.is_dir():
             messagebox.showwarning("ONYX-Pro", "Seleccioná una carpeta de firmware válida.")
             return
@@ -207,13 +237,21 @@ class App:
         if not cli or not Path(cli).is_file():
             messagebox.showerror("ONYX-Pro", "No encuentro arduino-cli. Seleccioná arduino-cli.exe con «Examinar…».")
             return
+        if include_guide and (guide is None or not guide.is_file()):
+            messagebox.showerror(
+                "ONYX-Pro",
+                "La opción de incluir la guía está activada, pero no se encuentra INSTALLATION_GUIDE.txt.\n\n"
+                "Seleccioná el archivo con «Examinar…» o desactivá la opción.",
+            )
+            return
         ino = list(sketch.glob("*.ino"))
         if len(ino) != 1:
             messagebox.showerror("ONYX-Pro", "La carpeta seleccionada debe contener exactamente un archivo .ino en su raíz.")
             return
         output.mkdir(parents=True, exist_ok=True)
         base = f"ONYX-Pro_Firmware_v{version}"
-        targets = [output / f"{base}.uf2", output / f"{base}.zip", output / f"{base}.zip.sha256"]
+        # Only the ZIP package and its checksum are published as output files.
+        targets = [output / f"{base}.zip", output / f"{base}.zip.sha256"]
         existing = [p.name for p in targets if p.exists()]
         if existing and not messagebox.askyesno("ONYX-Pro", "Ya existen estos archivos:\n\n" + "\n".join(existing) + "\n\n¿Reemplazarlos?"):
             return
@@ -227,10 +265,17 @@ class App:
         self.log_line(f"Versión: v{version}")
         self.log_line(f"Placa: {FQBN}")
         self.log_line(f"Opciones: {BOARD_OPTIONS}")
+        self.log_line(f"Guía de instalación incluida: {'Sí' if include_guide else 'No'}")
+        if include_guide:
+            self.log_line(f"Guía: {guide}")
         self.log_line("El código fuente no se modifica.")
-        threading.Thread(target=self.worker, args=(cli, sketch, output, base, version), daemon=True).start()
+        threading.Thread(
+            target=self.worker,
+            args=(cli, sketch, output, base, version, guide if include_guide else None),
+            daemon=True,
+        ).start()
 
-    def worker(self, cli, sketch, output, base, version):
+    def worker(self, cli, sketch, output, base, version, guide):
         try:
             with tempfile.TemporaryDirectory(prefix="onyx_firmware_") as tmp:
                 build = Path(tmp) / "build"
@@ -258,12 +303,11 @@ class App:
                 else:
                     source = uf2s[0]
 
-                uf2 = output / f"{base}.uf2"
+                archive_uf2_name = f"{base}.uf2"
                 archive = output / f"{base}.zip"
                 checksum = output / f"{base}.zip.sha256"
-                shutil.copy2(source, uf2)
-                self.log_line("\n[2/4] UF2 generado:")
-                self.log_line(f"{uf2} ({uf2.stat().st_size:,} bytes)")
+                self.log_line("\n[2/4] UF2 compilado (se incluirá únicamente dentro del ZIP):")
+                self.log_line(f"{archive_uf2_name} ({source.stat().st_size:,} bytes)")
 
                 readme = (
                     "ONYX-Pro RP2040 Firmware\n"
@@ -282,20 +326,25 @@ class App:
                 )
                 self.log_line("\n[3/4] Creando ZIP…")
                 with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
-                    zf.write(uf2, arcname=uf2.name)
+                    zf.write(source, arcname=archive_uf2_name)
                     zf.writestr("README.txt", readme)
+                    if guide is not None:
+                        zf.write(guide, arcname="INSTALLATION_GUIDE.txt")
+                        self.log_line("Guía agregada al ZIP: INSTALLATION_GUIDE.txt")
+                # Calculate the checksum only after every ZIP file has been added.
                 digest = hashlib.sha256(archive.read_bytes()).hexdigest()
                 checksum.write_text(f"{digest}  {archive.name}\n", encoding="utf-8")
 
                 self.log_line("\n[4/4] SHA-256:")
                 self.log_line(digest)
                 self.log_line("\nRELEASE CREADO CORRECTAMENTE")
-                self.log_line(str(uf2))
                 self.log_line(str(archive))
                 self.log_line(str(checksum))
                 self.status_line(f"Release v{version} creado correctamente.")
                 self.root.after(0, lambda: messagebox.showinfo(
-                    "ONYX-Pro", f"¡Firmware compilado y empaquetado!\n\n{base}.uf2\n{base}.zip\n{base}.zip.sha256\n\n{output}"
+                    "ONYX-Pro", f"¡Firmware compilado y empaquetado!\n\n{base}.zip\n{base}.zip.sha256"
+                    + ("\nINSTALLATION_GUIDE.txt incluido en el ZIP" if guide is not None else "\nGuía de instalación no incluida")
+                    + f"\n\n{output}"
                 ))
         except Exception as exc:
             self.log_line(f"\nERROR: {exc}")

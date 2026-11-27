@@ -1,0 +1,35 @@
+# ONYX-Pro
+## RP2040 Firmware Installation Guide
+
+### 1. Requirements
+- ONYX-Pro RP2040 controller board
+- USB data cable
+- Windows PC
+- Firmware UF2 file included in the release ZIP
+
+### 2. Enter BOOTSEL Mode
+1. Disconnect the RP2040 board from USB.
+2. Press and hold the **BOOTSEL** button.
+3. While holding BOOTSEL, connect the USB cable to your computer.
+4. Release the BOOTSEL button.
+5. Windows should recognize the RP2040 as a USB drive named `RPI-RP2`.
+
+### 3. Install the Firmware
+1. Open the `RPI-RP2` drive in Windows File Explorer.
+2. Copy the `.uf2` firmware file included in the release ZIP into the drive.
+3. Wait for the file transfer to finish.
+4. The RP2040 will automatically restart.
+5. The `RPI-RP2` drive will disappear. This is normal.
+
+### 4. Installation Complete
+The firmware is now installed.
+
+The RP2040 is ready to communicate with the ONYX-Pro Raspberry Pi software.
+
+### Important Notes
+- Do not disconnect the USB cable while copying the firmware.
+- Always use the firmware version supplied for your ONYX-Pro release.
+- No Arduino IDE or additional software is required.
+- If the `RPI-RP2` drive does not appear, disconnect the board and repeat the BOOTSEL procedure.
+
+**ONYX-Pro | Autonomous Chess Robot**
