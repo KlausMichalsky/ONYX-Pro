@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\core.cpp"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/core.cpp"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================

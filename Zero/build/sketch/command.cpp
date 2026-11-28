@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\command.cpp"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/command.cpp"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================
@@ -20,6 +20,7 @@
 #include "config.h"
 #include "core.h"
 #include "homing.h"
+#include "math.h"
 #include "motors.h"
 #include "sensors.h"
 #include "utils.h"
@@ -135,6 +136,57 @@ void processCommand(const String &cmdStr) {
     COMM.print("RX=[");
     COMM.print(trimmedCmd);
     COMM.println("]");
+
+    // ---------------------------------------------------------------
+    // CONSULTAR OFFSETS ACTUALES
+    // ---------------------------------------------------------------
+
+    if (trimmedCmd == "GET_OFFSETS") {
+        COMM.print("OFFSETS X=");
+        COMM.print(OFFSET_X, 2);
+        COMM.print(" Y=");
+        COMM.println(OFFSET_Y, 2);
+
+        return;
+    }
+
+    // ---------------------------------------------------------------
+    // CONFIGURACIÓN DINÁMICA DE OFFSETS
+    // ---------------------------------------------------------------
+
+    if (trimmedCmd.startsWith("SET_OFFSETS")) {
+        float newOffsetX;
+        float newOffsetY;
+        int consumed = 0;
+
+        int parsed = sscanf(
+            trimmedCmd.c_str(),
+            "SET_OFFSETS %f %f %n",
+            &newOffsetX,
+            &newOffsetY,
+            &consumed);
+
+        if (parsed != 2 ||
+            consumed == 0 ||
+            trimmedCmd.substring(consumed).length() != 0 ||
+            !isfinite(newOffsetX) ||
+            !isfinite(newOffsetY)) {
+            COMM.println("ERROR OFFSETS FORMAT");
+            return;
+        }
+
+        OFFSET_X = newOffsetX;
+        OFFSET_Y = newOffsetY;
+
+        COMM.print("OFFSETS OK X=");
+        COMM.print(OFFSET_X, 2);
+        COMM.print(" Y=");
+        COMM.println(OFFSET_Y, 2);
+
+        return;
+    }
+
+    // ---------------------------------------------------------------
 
     Command cmd = parseCommand(trimmedCmd);
 

@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\config.h"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/config.h"
 // =======================================================================
 //                      🔹 O N Y X - P R O 🔹
 // =======================================================================
@@ -70,9 +70,13 @@
 
 // PARÁMETROS DE CONFIGURACIÓN EJE Z
 // -----------------------------------------------------------------------
-
-constexpr float Z_GAME_SPEED = 55000.0f;         // Velocidad durante el juego min.6000 max.55000
-constexpr float Z_GAME_ACCELERATION = 100000.0f; // Aceleración durante el juego min.2000 max.30000
+constexpr float Z_GAME_SPEED = 55000.0f;        // Velocidad durante el juego min.6000 max.55000
+constexpr float Z_GAME_ACCELERATION = 80000.0f; // Aceleración durante el juego min.2000 max.100000
+// Aceleración	Velocidad máxima teórica
+// 80.000	    5.130 pasos/s
+// 100.000	    5.745 pasos/s
+// 150.000	    7.036 pasos/s
+// 200.000	    8.124 pasos/s
 
 #define Z_STEPS_DOWN 3300 // Cantidad de pasos desde el sensor
                           // hasta el punto más bajo -> posición de agarre
@@ -84,13 +88,11 @@ constexpr float Z_GAME_ACCELERATION = 100000.0f; // Aceleración durante el jueg
 
 // NIVELES LÓGICOS DE ENABLE DEL TMC2209
 // -----------------------------------------------------------------------
-
 constexpr bool ENABLE_ACTIVE = LOW; // Nivel lógico (LOW=ON, HIGH=OFF)
 constexpr bool ENABLE_INACTIVE = HIGH;
 
 // CONFIGURACIÓN DE STEPS Y MICROSTEPPING
 // -----------------------------------------------------------------------
-
 constexpr int MOTOR_STEPS = 200;
 
 constexpr int MOTOR1_MICROSTEPPING = 16;
@@ -99,20 +101,25 @@ constexpr int MOTOR3_MICROSTEPPING = 8;
 
 // CONFIGURACIÓN DEL TABLERO EN MM
 // -----------------------------------------------------------------------
-
 constexpr float SQUARE_SIZE = 40.0f;
-constexpr float OFFSET_X = -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f);
-constexpr float OFFSET_Y = 121.0f;
+
+// Valores predeterminados de fábrica
+constexpr float DEFAULT_OFFSET_X =
+    -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f);
+
+constexpr float DEFAULT_OFFSET_Y = 120.0f;
+
+// Valores activos durante el funcionamiento
+inline float OFFSET_X = DEFAULT_OFFSET_X;
+inline float OFFSET_Y = DEFAULT_OFFSET_Y;
 
 // CONFIGURACIÓN DE LOS BRAZOS EN MM
 // -----------------------------------------------------------------------
-
 constexpr float LINK1 = 285;
 constexpr float LINK2 = 170;
 
 // COORDENADAS FÍSICAS DE LA ZONA DE CAPTURA EN MM
 // -----------------------------------------------------------------------
-
 #define CAPTURE_BOARD_COLUMNS 5
 #define CAPTURE_BOARD_ROWS 3
 #define CAPTURE_BOARD_SLOTS 15
@@ -127,7 +134,6 @@ constexpr float CAPTURE_Y[CAPTURE_BOARD_ROWS] = {
 
 // TIPOS DE DATOS Y DEFINICIÓN DE MÁQUINA DE ESTADOS
 // -----------------------------------------------------------------------
-
 // Comandos recibidos por UART
 enum class Command {
     STATUS,

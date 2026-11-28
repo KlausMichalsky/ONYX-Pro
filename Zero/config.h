@@ -87,13 +87,11 @@ constexpr float Z_GAME_ACCELERATION = 80000.0f; // Aceleración durante el juego
 
 // NIVELES LÓGICOS DE ENABLE DEL TMC2209
 // -----------------------------------------------------------------------
-
 constexpr bool ENABLE_ACTIVE = LOW; // Nivel lógico (LOW=ON, HIGH=OFF)
 constexpr bool ENABLE_INACTIVE = HIGH;
 
 // CONFIGURACIÓN DE STEPS Y MICROSTEPPING
 // -----------------------------------------------------------------------
-
 constexpr int MOTOR_STEPS = 200;
 
 constexpr int MOTOR1_MICROSTEPPING = 16;
@@ -102,20 +100,25 @@ constexpr int MOTOR3_MICROSTEPPING = 8;
 
 // CONFIGURACIÓN DEL TABLERO EN MM
 // -----------------------------------------------------------------------
-
 constexpr float SQUARE_SIZE = 40.0f;
-constexpr float OFFSET_X = -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f);
-constexpr float OFFSET_Y = 121.0f;
+
+// Valores predeterminados de fábrica
+constexpr float DEFAULT_OFFSET_X =
+    -((3 * SQUARE_SIZE) + SQUARE_SIZE / 2.0f);
+
+constexpr float DEFAULT_OFFSET_Y = 120.0f;
+
+// Valores activos durante el funcionamiento
+inline float OFFSET_X = DEFAULT_OFFSET_X;
+inline float OFFSET_Y = DEFAULT_OFFSET_Y;
 
 // CONFIGURACIÓN DE LOS BRAZOS EN MM
 // -----------------------------------------------------------------------
-
 constexpr float LINK1 = 285;
 constexpr float LINK2 = 170;
 
 // COORDENADAS FÍSICAS DE LA ZONA DE CAPTURA EN MM
 // -----------------------------------------------------------------------
-
 #define CAPTURE_BOARD_COLUMNS 5
 #define CAPTURE_BOARD_ROWS 3
 #define CAPTURE_BOARD_SLOTS 15
@@ -130,7 +133,6 @@ constexpr float CAPTURE_Y[CAPTURE_BOARD_ROWS] = {
 
 // TIPOS DE DATOS Y DEFINICIÓN DE MÁQUINA DE ESTADOS
 // -----------------------------------------------------------------------
-
 // Comandos recibidos por UART
 enum class Command {
     STATUS,

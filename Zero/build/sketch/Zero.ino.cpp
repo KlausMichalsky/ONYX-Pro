@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\Zero.ino"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/Zero.ino"
 // =======================================================================
 //                          🔹 O N Y X   -   P R O 🔹
 // =======================================================================
@@ -28,11 +28,11 @@
 
 // SETUP
 // -----------------------------------------------------------------------
-#line 30 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\Zero.ino"
+#line 30 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/Zero.ino"
 void setup();
-#line 45 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\Zero.ino"
+#line 45 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/Zero.ino"
 void loop();
-#line 30 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\Zero.ino"
+#line 30 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/Zero.ino"
 void setup() {
     delay(1000);
     communicationInit();

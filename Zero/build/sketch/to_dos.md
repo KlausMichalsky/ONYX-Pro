@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\to_dos.md"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/to_dos.md"
 # ✅ ToDos — Proyecto: **ChessBot---Zero**
 
 

@@ -1,4 +1,4 @@
-#line 1 "C:\\Users\\Klaus\\Documents\\ONYX-Pro\\Zero\\z_Axis.h"
+#line 1 "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/z_Axis.h"
 // =======================================================================
 //                      🔹 O N Y X   -   P R O 🔹
 // =======================================================================
