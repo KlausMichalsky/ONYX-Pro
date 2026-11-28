@@ -2,8 +2,11 @@ import tkinter as tk
 from tkinter import messagebox
 import math
 
-import robot
+import sys
+from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import robot
 
 # =========================================================
 # ONYX-Pro GUI - MACHINE CALIBRATION
@@ -90,9 +93,7 @@ class CalibrationScreen:
         )
         self.status_label.pack(side="right", pady=10)
 
-        tk.Frame(self.parent, bg=BORDER, height=1).pack(
-            fill="x", padx=24, pady=7
-        )
+        tk.Frame(self.parent, bg=BORDER, height=1).pack(fill="x", padx=24, pady=7)
 
         main = tk.Frame(self.parent, bg=BG)
         main.pack(fill="both", expand=True, padx=28, pady=(5, 8))
@@ -243,7 +244,14 @@ class CalibrationScreen:
         return value_label, up_button, down_button
 
     def change_value(
-        self, value_var, direction, value_label, up_button, down_button, minimum, maximum
+        self,
+        value_var,
+        direction,
+        value_label,
+        up_button,
+        down_button,
+        minimum,
+        maximum,
     ):
         new_value = value_var.get() + direction * STEP_UNITS
         min_units = round(minimum * 2)
@@ -286,9 +294,7 @@ class CalibrationScreen:
 
     def ensure_connection(self):
         if robot.ser is None or not robot.ser.is_open:
-            self.update_status(
-                "CONNECTING...", BLUE, "BUSY", "CONNECTING TO RP2040"
-            )
+            self.update_status("CONNECTING...", BLUE, "BUSY", "CONNECTING TO RP2040")
             robot.initialize_serial()
 
         if robot.ser is None or not robot.ser.is_open:
