@@ -3,6 +3,7 @@ from tkinter import messagebox
 import subprocess
 
 from home_screen import HomeScreen
+from calibration import CalibrationScreen
 
 # =========================================================
 # ONYX-Pro GUI
@@ -103,11 +104,7 @@ class OnyxApp:
             self.show_color_selection()
 
         elif name == "calibration":
-            self.show_placeholder(
-                "MACHINE CALIBRATION",
-                "Calibration tools will be integrated here.",
-                "HOME",
-            )
+            CalibrationScreen(self.container, self)
 
         elif name == "settings":
             self.show_placeholder(
