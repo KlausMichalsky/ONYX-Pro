@@ -69,9 +69,9 @@
         "-I/Users/klausmichalsky/Library/Arduino15/packages/rp2040/hardware/rp2040/6.4.0/variants/waveshare_rp2040_zero",
         "-I/Users/klausmichalsky/Library/Arduino15/packages/rp2040/hardware/rp2040/6.4.0/libraries/Wire/src",
         "-I/Users/klausmichalsky/Arduino/libraries/AccelStepper/src",
-        "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/build/sketch/core.cpp",
+        "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/build/sketch/motors.cpp",
         "-o",
-        "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/build/sketch/core.cpp.o"
+        "/Users/klausmichalsky/Proyectos Mac/ONYX-Pro_Workspace/ONYX-Pro/Zero/build/sketch/motors.cpp.o"
       ],
       "defines": [
         "USBD_PID=0x0003",

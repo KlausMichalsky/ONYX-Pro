@@ -1,5 +1,5 @@
 {
-  "port": "COM7",
+  "port": "/dev/cu.BoseQuietComfort35",
   "configuration": "flash=2097152_0,freq=200,opt=Small,os=none,profile=Disabled,rtti=Disabled,stackprotect=Disabled,exceptions=Disabled,dbgport=Disabled,dbglvl=None,usbstack=picosdk,ipbtstack=ipv4only,uploadmethod=default",
   "output": "build",
   "board": "rp2040:rp2040:waveshare_rp2040_zero",
@@ -9,7 +9,7 @@
   "configurationRequired": true,
   "compile_profile": "",
   "monitorPortSettings": {
-    "port": "COM7",
+    "port": "/dev/tty.BoseQuietComfort35",
     "baudRate": 115200,
     "lineEnding": "\r\n",
     "dataBits": 8,
