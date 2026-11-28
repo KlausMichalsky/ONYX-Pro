@@ -72,12 +72,12 @@ class HomeScreen:
         welcome.pack(fill="x", pady=(15, 12))
 
         tk.Label(
-            welcome, text="LET'S PLAY CHESS", font=("Arial", 22, "bold"), bg=BG, fg=TEXT
+            welcome, text="READY TO PLAY?", font=("Arial", 22, "bold"), bg=BG, fg=TEXT
         ).pack()
 
         tk.Label(
             welcome,
-            text="YOUR INTELLIGENT CHESS COMPANION",
+            text="YOUR CHESS EXPERIENCE STARTS HERE",
             font=("Arial", 9),
             bg=BG,
             fg=MUTED,
